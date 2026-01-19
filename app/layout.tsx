@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lexend } from "next/font/google";
 import "./globals.css";
+import { Fragment } from "react/jsx-runtime";
+import TopHeader from "./components/Headers/TopHeader";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lexendSans = Lexend({
+  variable: "--font-lexand-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Foreware",
@@ -24,10 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${lexendSans.variable} antialiased`}>
+        <TopHeader />
+        <Fragment>{children}</Fragment>
       </body>
     </html>
   );
