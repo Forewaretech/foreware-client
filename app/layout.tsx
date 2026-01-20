@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
-import "./globals.css";
 import { Fragment } from "react/jsx-runtime";
 import TopHeader from "./components/Headers/TopHeader";
+import "./globals.css";
 
 const lexendSans = Lexend({
   variable: "--font-lexand-sans",
