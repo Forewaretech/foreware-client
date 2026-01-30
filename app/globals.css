@@ -2,9 +2,11 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  /* --foreground: #171717; */
   --line: #D9D9D9;
   --primary: #00A7E5;
+  --dark-1: #191919;
+  --dark-2: #131313;
 }
 
 @theme inline {
@@ -14,6 +16,8 @@
   --font-mono: var(--font-lexend-mono);
 
   --color-line: var(--line);
+  --color-dark-1: var(--dark-1);
+  --color-dark-2: var(--dark-2);
   --color-primary: var(--primary);
   --color-secondary: #C4A742
 }
