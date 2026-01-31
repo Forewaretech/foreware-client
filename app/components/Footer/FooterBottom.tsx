@@ -7,7 +7,10 @@ const FooterBottom = () => {
       text-white text-xs"
     >
       <p>© 2025 | Foreware. All rights reserved.</p>
-      <div className=" flex items-center gap-4">
+      <div
+        className=" flex flex-col items-center gap-4
+      lg:flex-row"
+      >
         <Link href="">Terms and Conditions</Link>
         <Link href="">Privacy Policy</Link>
         <Link href="">Cookies</Link>

@@ -13,7 +13,7 @@ const Footer = () => {
       <div className=" bg-dark-1">
         <div className="container">
           <div
-            className="flex flex-col justify-between border-b border-white py-20 
+            className="flex flex-col gap-4 justify-between border-b border-white py-20 
           lg:flex-row"
           >
             <FooterSolutions />
