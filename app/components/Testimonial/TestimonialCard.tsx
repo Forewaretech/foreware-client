@@ -1,11 +1,12 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
+import { CompanyLogoData } from "./Testimonials";
 
 interface TestimonialData {
   quote: string;
   customerName: string;
   customerTitle: string;
-  customerImage: StaticImageData | string;
+  customerImage: CompanyLogoData;
 }
 
 interface TestimonialCardProps {
@@ -32,7 +33,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
       <footer className="flex w-full gap-3 text-xs mt-3">
         <Image
-          src={testimonial.customerImage}
+          src={testimonial.customerImage.src}
           alt={`${testimonial.customerName} profile`}
           className="aspect-[1] object-contain w-14 shrink-0 rounded-lg"
         />
@@ -40,7 +41,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
           <cite className="text-black font-bold not-italic">
             {testimonial.customerName}
           </cite>
-          <div className="text-[#00A7E5] italic font-normal mt-[5px]">
+          <div className="text-[#00A7E5] italic font-normal mt-1.25">
             {testimonial.customerTitle}
           </div>
         </div>

@@ -1,4 +1,5 @@
 import HeaderContent from "../Headers/HeaderContent";
+import Testimonials from "../testimonials/Testimonials";
 
 const TestimonialsPreview = () => {
   return (
@@ -16,7 +17,9 @@ const TestimonialsPreview = () => {
         </HeaderContent>
       </header>
 
-      <section></section>
+      <section>
+        <Testimonials />
+      </section>
     </section>
   );
 };
