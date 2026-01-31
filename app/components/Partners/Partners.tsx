@@ -1,7 +1,5 @@
-import Button from "../Buttons/Button";
 import HighlightButton from "../Buttons/HighlightButton";
 import HeaderContent from "../Headers/HeaderContent";
-import BaseSpacing from "../Spacing/BaseSpacing";
 import PartnerList from "./PartnerList";
 
 const Partners = () => {

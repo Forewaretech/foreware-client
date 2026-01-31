@@ -40,7 +40,7 @@ const BlogPosts = () => {
     <section className=" flex gap-2.5">
       {posts.map(({ title, shortDescription, image }) => {
         return (
-          <div className=" w-1/4">
+          <div key={title} className=" w-1/4">
             <BlogPostCard
               title={title}
               shortDescription={shortDescription}

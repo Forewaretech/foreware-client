@@ -4,7 +4,9 @@ import Partners from "./components/Partners/Partners";
 import SectionSpacing from "./components/Spacing/SectionSpacing";
 import TechBusinessForward from "./components/TechBusinessForward/TechBusinessForward";
 import TestimonialsPreview from "./components/Testimonial/TestimonialsPreview";
-import OurServices from "./Services/OurServices";
+import DigitalTransformers from "./components/Transformers/DigitalTransformers";
+import OurServices from "./components/Services/OurServices";
+import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -19,8 +21,11 @@ export default function Home() {
       <Partners />
       <SectionSpacing />
       <TestimonialsPreview />
+      <WhyChooseUs />
       <SectionSpacing />
       <BlogsPreview />
+      <DigitalTransformers />
+      <SectionSpacing />
     </main>
   );
 }

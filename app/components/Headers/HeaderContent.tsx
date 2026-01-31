@@ -1,11 +1,14 @@
 import { PropsWithChildren } from "react";
 import HighlightButton from "../Buttons/HighlightButton";
 import Heading from "./Headings";
+import clsx from "clsx";
 
 interface Props {
   highlightText?: string;
   heading: string;
   center?: boolean;
+  variant?: "white";
+  className?: string;
 }
 
 const HeaderContent = ({
@@ -13,15 +16,22 @@ const HeaderContent = ({
   heading,
   highlightText,
   center,
+  variant,
+  className,
 }: Readonly<PropsWithChildren<Props>>) => {
   return (
     <header
-      className={`${center ? "mx-auto text-center" : ""} 
-        max-w-145`}
+      className={clsx(
+        `${center ? "mx-auto text-center" : ""} 
+        max-w-145`,
+        className,
+      )}
     >
       {highlightText && (
         <div className={`${center ? "flex justify-center items-center" : ""}`}>
-          <HighlightButton>{highlightText}</HighlightButton>
+          <HighlightButton variant={variant ?? "transparent"}>
+            {highlightText}
+          </HighlightButton>
         </div>
       )}
 

@@ -42,13 +42,13 @@ export const CustomerAvatar = ({
       {/* White card container */}
       <div
         className={`${containerSize} flex items-center justify-center bg-card rounded-lg border 
-        border-border transition-all duration-300 ${
+        border-line transition-all duration-300 ${
           isActive ? "ring-2 ring-secondary shadow-md" : "hover:shadow-md"
         }`}
       >
         {/* Inner image container */}
         <div
-          className={`${imageSize} rounded-lg overflow-hidden border border-border`}
+          className={`${imageSize} rounded-lg overflow-hidden border border-line`}
         >
           <Image src={src} alt={alt} className="w-full h-full object-cover" />
         </div>

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import quote from "@/public/icons/quote.svg";
+
 interface TestimonialData {
   quote: string;
   customerName: string;
@@ -44,23 +46,18 @@ export const TestimonialCard = ({
         x: { type: "spring", stiffness: 300, damping: 30 },
         opacity: { duration: 0.2 },
       }}
-      className="w-[301px] bg-card/80 backdrop-blur-sm border border-border rounded-lg p-4"
+      className="w-75.25 bg-card/80 backdrop-blur-sm border border-line rounded-lg p-4"
     >
       {/* Quote mark */}
       <blockquote className="w-full">
-        <div
-          className="text-foreground text-4xl leading-none font-serif"
-          aria-hidden="true"
-        >
-          "
-        </div>
+        <Image src={quote} alt="Quote" />
         <p className="text-foreground text-xs leading-relaxed mt-1">
           {testimonial.quote}
         </p>
       </blockquote>
 
       {/* Divider */}
-      <hr className="border-border my-3" />
+      <hr className="border-line my-3" />
 
       {/* Customer info */}
       <footer className="flex items-center gap-3">

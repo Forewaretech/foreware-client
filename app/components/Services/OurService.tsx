@@ -12,7 +12,7 @@ const OurService = ({ icon, service, isFirst, isLast }: Readonly<Props>) => {
     <article
       className={`${isFirst ? " rounded-l-lg rounded-bl-lg bg-primary h-39 " : "h-36.5"}  
       ${isLast && " rounded-r-lg"}
-      min-w-39.75 bg-[#000D30] 
+      min-w-39.75 bg-foreware-3
     text-white px-6 py-4`}
     >
       <Image src={icon} alt={service} />

@@ -1,8 +1,8 @@
 import OurService from "./OurService";
-import ContentSpacing from "../components/Spacing/ContentSpacing";
-import HeaderContent from "../components/Headers/HeaderContent";
-import Button from "../components/Buttons/Button";
-import BaseSpacing from "../components/Spacing/BaseSpacing";
+import ContentSpacing from "../Spacing/ContentSpacing";
+import HeaderContent from "../Headers/HeaderContent";
+import Button from "../Buttons/Button";
+import BaseSpacing from "../Spacing/BaseSpacing";
 
 import custom_soft_dev from "@/public/icons/custom_soft_dev.svg";
 import data_analytics_ai from "@/public/icons/data_analytics_ai.svg";
