@@ -11,12 +11,13 @@ import customer2 from "@/public/images/customers/customer_2.png";
 import customer3 from "@/public/images/customers/customer_3.jpg";
 import customer4 from "@/public/images/customers/customer_4.jpg";
 import customer5 from "@/public/images/customers/customer_5.jpg";
+import { StaticImageData } from "next/image";
 
 interface TestimonialData {
   quote: string;
   customerName: string;
   customerTitle: string;
-  customerImage: string;
+  customerImage: StaticImageData | string;
   avatarSize: "small" | "large";
 }
 
@@ -117,7 +118,10 @@ const Testimonials = () => {
   const rightAvatarIndices = [3, 4];
 
   return (
-    <section className="bg-muted pt-20 pb-10">
+    <section
+      className="bg-muted  pb-10
+    lg:pt-20"
+    >
       {/* Main content area */}
       <div className="flex items-center gap-4 justify-center flex-wrap min-w-full px-4 md:px-12">
         {/* Left avatars */}

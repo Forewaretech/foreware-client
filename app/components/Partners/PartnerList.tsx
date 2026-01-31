@@ -34,12 +34,24 @@ const partners = [
   },
 ];
 
-const PartnerList = () => {
+interface PartnerListProps {
+  direction?: "up" | "down";
+}
+
+const PartnerList = ({ direction = "up" }: PartnerListProps) => {
   return (
-    <ul className="flex flex-col gap-2">
-      {partners.map(({ src, alt }, i) => (
-        <li key={i} className="w-25 h-17.5 rounded-2xl overflow-hidden">
-          <Image src={src} alt={alt} className=" h-full w-full object-cover" />
+    <ul
+      className={`
+        flex flex-col gap-2
+        ${direction === "up" ? "animate-scrollUp" : "animate-scrollDown"}
+      `}
+    >
+      {[...partners, ...partners].map(({ src, alt }, i) => (
+        <li
+          key={i}
+          className="w-25 h-17.5 rounded-2xl overflow-hidden bg-white"
+        >
+          <Image src={src} alt={alt} className="h-full w-full object-contain" />
         </li>
       ))}
     </ul>

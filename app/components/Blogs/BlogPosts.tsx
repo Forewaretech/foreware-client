@@ -37,10 +37,19 @@ const posts = [
 
 const BlogPosts = () => {
   return (
-    <section className=" flex gap-2.5">
+    <section
+      className=" flex gap-2.5 has-scrollbar overflow-auto
+    overscroll-behavior-inline-contain scroll-snap-type-inline-mandatory"
+    >
       {posts.map(({ title, shortDescription, image }) => {
         return (
-          <div key={title} className=" w-1/4">
+          <div
+            key={title}
+            className="min-w-[calc(100%-24px)]
+          scroll-snap-align-start
+          
+          lg:w-1/4 lg:min-w-1/4"
+          >
             <BlogPostCard
               title={title}
               shortDescription={shortDescription}

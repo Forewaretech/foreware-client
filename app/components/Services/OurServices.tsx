@@ -37,10 +37,13 @@ const services = [
 
 const OurServices = () => {
   return (
-    <section className=" container">
-      <ul className="flex gap-px">
+    <section className="container">
+      <ul
+        className="flex gap-px overflow-auto has-scrollbar
+      scroll-snap-type-inline-mandatory overscroll-behavior-inline-contain"
+      >
         {services.map(({ icon, service }, i) => (
-          <li key={service}>
+          <li key={service} className="scroll-snap-align-start">
             <OurService
               isFirst={i == 0}
               isLast={i == services.length - 1}
@@ -51,7 +54,10 @@ const OurServices = () => {
         ))}
       </ul>
       <ContentSpacing />
-      <section className="flex justify-between">
+      <section
+        className="flex flex-col justify-between gap-4
+      lg:flex-row"
+      >
         <div className="min-w-1/2">
           <HeaderContent heading="Enterprise Systems That Scale.">
             Modern enterprise solutions that unify operations, increase

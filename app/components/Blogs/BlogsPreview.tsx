@@ -10,7 +10,10 @@ const BlogsPreview = () => {
   return (
     <section className=" pb-20">
       <section>
-        <div className="container flex items-end justify-between">
+        <div
+          className="container flex flex-col gap-4 lg:items-end justify-between
+        lg:flex-row"
+        >
           <div>
             <HeaderContent highlightText="Blog" heading="News & Insights">
               Stay ahead with perspectives on digital transformation, enterprise
@@ -21,7 +24,7 @@ const BlogsPreview = () => {
               href={""}
               className="flex gap-1 items-center text-primary font-light"
             >
-              <span>View All</span>{" "}
+              <span>View All</span>
               <ArrowRight2 size={20} color="currentColor" />
             </Link>
           </div>
@@ -32,7 +35,11 @@ const BlogsPreview = () => {
         </div>
       </section>
       <ContentSpacing />
-      <section className="px-10">
+      <section
+        className="
+      px-4
+      lg:px-10"
+      >
         <BlogPosts />
       </section>
     </section>

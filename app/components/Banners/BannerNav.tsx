@@ -1,26 +1,76 @@
-import React from "react";
+"use client";
+
+import { Menu, X } from "lucide-react";
+import Button from "../Buttons/Button";
 import Logo from "../Generics/Logo";
 import Navigations from "../Navigations/Navigations";
-import Button from "../Buttons/Button";
+import { useState } from "react";
 
 const BannerNav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div
-      className=" w-full h-16 bg-white' flex items-center rounded-lg
-         overflow-hidden"
+      className=" w-full h-16 flex items-center rounded-lg
+         flex-wrap "
     >
       <nav
-        className=" p-4 bg-white/80 rounded-lg border-2 
-            border-white w-full h-full flex justify-between items-center"
+        className={`${!isOpen && "rounded-lg"} p-4 bg-white/80  border-2 rounded-t-lg
+        border-white w-full h-full flex justify-between items-center
+            
+          lg:rounded-lg`}
       >
-        <div>
+        <div
+          className=" flex items-center justify-between min-w-full
+        lg:min-w-fit"
+        >
           <Logo />
+
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 rounded-md hover:bg-accent transition-colors duration-200"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+          >
+            <div className="relative w-5 h-5">
+              <Menu
+                className={`absolute inset-0 w-5 h-5 transition-all duration-300 ease-out
+                  ${isOpen ? "opacity-0 rotate-90 scale-50" : "opacity-100 rotate-0 scale-100"}`}
+              />
+              <X
+                className={`absolute inset-0 w-5 h-5 transition-all duration-300 ease-out
+                  ${isOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-50"}`}
+              />
+            </div>
+          </button>
         </div>
-        <Navigations />
-        <div>
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:block">
+          <Navigations />
+        </div>
+
+        {/* Desktop CTA */}
+        <div className="hidden lg:block">
           <Button>Contact Us</Button>
         </div>
       </nav>
+
+      {/* Mobile Navigation Dropdown */}
+      <div
+        className={`lg:hidden overflow-hidden transition-all duration-300 ease-out
+          min-w-full
+          ${isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"}`}
+      >
+        <nav
+          className={`p-4 bg-white/80 backdrop-blur-sm border border-t-0 border-border/50
+            rounded-b-lg shadow-sm transform transition-transform duration-300 ease-out
+            
+            ${isOpen ? "translate-y-0" : "-translate-y-2"}`}
+        >
+          <Navigations />
+        </nav>
+      </div>
     </div>
   );
 };

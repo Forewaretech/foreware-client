@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import quote from "@/public/icons/quote.svg";
 
@@ -7,7 +7,7 @@ interface TestimonialData {
   quote: string;
   customerName: string;
   customerTitle: string;
-  customerImage: string;
+  customerImage: StaticImageData | string;
 }
 
 interface TestimonialCardProps {

@@ -5,12 +5,13 @@ import PartnerList from "./PartnerList";
 const Partners = () => {
   return (
     <section className=" container">
-      <section className=" py-20 flex items-end justify-between gap-10">
+      <section
+        className="py-20 flex flex-col justify-between gap-10 items-center
+      lg:flex-row lg:items-end"
+      >
         <div>
           <HighlightButton>Our Partners</HighlightButton>
-          <HeaderContent
-            heading={"Building Africa's Future Through Partnership."}
-          >
+          <HeaderContent heading="Building Africa's Future Through Partnership.">
             We partner with leading technology providers to deliver
             enterprise-grade solutions across Nigeria and Africa. These
             strategic alliances ensure you get proven platforms, local
@@ -20,19 +21,15 @@ const Partners = () => {
         </div>
         <div
           className="w-fit h-60.5 border-[#D9D9D9] border-2 rounded-lg
-        bg-[#F2F2F2] p-2 grid grid-cols-4 gap-2 overflow-hidden"
+        bg-[#F2F2F2] p-2 grid gap-2 overflow-hidden grid-cols-3
+        
+        lg:grid-cols-4"
         >
-          <div>
-            <PartnerList />
-          </div>
-          <div>
-            <PartnerList />
-          </div>
-          <div>
-            <PartnerList />
-          </div>{" "}
-          <div>
-            <PartnerList />
+          <PartnerList direction="up" />
+          <PartnerList direction="down" />
+          <PartnerList direction="up" />
+          <div className="hidden lg:block">
+            <PartnerList direction="down" />
           </div>
         </div>
       </section>

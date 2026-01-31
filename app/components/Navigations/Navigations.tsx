@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Button from "../Buttons/Button";
 
 const navigations = [
   {
@@ -26,7 +27,10 @@ const Navigations = () => {
   const pathname = usePathname();
 
   return (
-    <ul className=" flex items-center ">
+    <ul
+      className=" flex flex-col items-start gap-4 
+    lg:flex-row lg:items-center lg:gap-0"
+    >
       {navigations.map(({ text, href }) => {
         const isActive = pathname === href;
         return (
@@ -43,6 +47,10 @@ const Navigations = () => {
           </li>
         );
       })}
+
+      <li className=" lg:hidden">
+        <Button>Contact Us</Button>
+      </li>
     </ul>
   );
 };

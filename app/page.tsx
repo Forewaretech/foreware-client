@@ -17,7 +17,6 @@ export default function Home() {
       <SectionSpacing />
       <OurServices />
       <SectionSpacing />
-      <SectionSpacing />
       <Partners />
       <SectionSpacing />
       <TestimonialsPreview />
