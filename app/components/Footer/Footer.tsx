@@ -23,7 +23,10 @@ const Footer = () => {
 
         <div className=" border-t-[0.2px] container py-20">
           <Button>Contact Us</Button>
-          <div className="flex mt-5">
+          <div
+            className="flex mt-5 flex-col
+          lg:flex-row"
+          >
             <div className="w-1/2 flex flex-col gap-6">
               <div className="flex gap-4">
                 <Phone className=" text-white" />
