@@ -12,7 +12,10 @@ const Footer = () => {
     <footer className=" ">
       <div className=" bg-dark-1">
         <div className="container">
-          <div className="flex justify-between border-b border-white py-20 ">
+          <div
+            className="flex flex-col justify-between border-b border-white py-20 
+          lg:flex-row"
+          >
             <FooterSolutions />
             <FooterS />
             <FooterQuickLinks />
