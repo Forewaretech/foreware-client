@@ -4,7 +4,8 @@ const FooterBottom = () => {
   return (
     <div
       className="container bg-dark-2 py-5 flex  flex-col items-center justify-between 
-      text-white text-xs gap-2
+        text-white text-xs gap-2
+      
       lg:flex-row"
     >
       <p>© 2025 | Foreware. All rights reserved.</p>

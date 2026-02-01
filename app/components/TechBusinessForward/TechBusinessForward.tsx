@@ -1,4 +1,6 @@
 import HeaderContent from "../Headers/HeaderContent";
+import OurServices from "../Services/OurServices";
+import SectionSpacing from "../Spacing/SectionSpacing";
 
 const TechBusinessForward = () => {
   return (
@@ -13,6 +15,8 @@ const TechBusinessForward = () => {
           intelligent data systems, and seamless integrations that turn
           operational complexity into competitive advantage
         </HeaderContent>
+        <SectionSpacing />
+        <OurServices />
       </section>
     </section>
   );

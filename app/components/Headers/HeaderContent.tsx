@@ -2,6 +2,7 @@ import { PropsWithChildren } from "react";
 import HighlightButton from "../Buttons/HighlightButton";
 import Heading from "./Headings";
 import clsx from "clsx";
+import Button from "../Buttons/Button";
 
 interface Props {
   highlightText?: string;
@@ -9,6 +10,7 @@ interface Props {
   center?: boolean;
   variant?: "white";
   className?: string;
+  buttonText?: string;
 }
 
 const HeaderContent = ({
@@ -18,6 +20,7 @@ const HeaderContent = ({
   center,
   variant,
   className,
+  buttonText,
 }: Readonly<PropsWithChildren<Props>>) => {
   return (
     <header
@@ -38,7 +41,12 @@ const HeaderContent = ({
       <div className="py-4 font-semibold">
         <Heading variant="h2">{heading}</Heading>
       </div>
-      <p className="text-xl">{children}</p>
+      <div className="text-xl">{children}</div>
+      {buttonText && (
+        <div className={`${center && "flex justify-center items-center"} my-4`}>
+          <Button>{buttonText}</Button>
+        </div>
+      )}
     </header>
   );
 };

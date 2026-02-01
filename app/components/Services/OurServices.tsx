@@ -11,45 +11,53 @@ import it_sup_consulting_training from "@/public/icons/it_sup_consulting_trainin
 import sys_int_api from "@/public/icons/sys_int_api.svg";
 import enterprise_scale from "@/public/images/enterprise_scale.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
     service: "Enterprise & Business Solutions",
     icon: enterprise_and_business,
+    href: "enterprise-business-solution",
   },
   {
     service: "Custom Software Development",
     icon: custom_soft_dev,
+    href: "custom-software-solution",
   },
   {
     service: "Data Analytics & AI Solutions",
     icon: data_analytics_ai,
+    href: "data-analytics-ai-solution",
   },
   {
     service: "System Integration & API Dev.",
     icon: sys_int_api,
+    href: "system-integration-api-dev",
   },
   {
     service: "IT Support, Consulting & Training",
     icon: it_sup_consulting_training,
+    href: "it-support-sonsulting-training",
   },
 ];
 
 const OurServices = () => {
   return (
-    <section className="container">
+    <section>
       <ul
         className="flex gap-px overflow-auto has-scrollbar
       scroll-snap-type-inline-mandatory overscroll-behavior-inline-contain"
       >
-        {services.map(({ icon, service }, i) => (
+        {services.map(({ icon, service, href }, i) => (
           <li key={service} className="scroll-snap-align-start">
-            <OurService
-              isFirst={i == 0}
-              isLast={i == services.length - 1}
-              icon={icon}
-              service={service}
-            />
+            <Link href={href}>
+              <OurService
+                isFirst={i == 0}
+                isLast={i == services.length - 1}
+                icon={icon}
+                service={service}
+              />
+            </Link>
           </li>
         ))}
       </ul>

@@ -10,7 +10,8 @@ interface Props {
 const OurService = ({ icon, service, isFirst, isLast }: Readonly<Props>) => {
   return (
     <article
-      className={`${isFirst ? " rounded-l-lg rounded-bl-lg bg-primary h-41 lg:h-39 " : "h-38.5 lg:h-36.5"}  
+      className={`            
+ ${isFirst ? " rounded-l-lg rounded-bl-lg bg-primary h-41 lg:h-39 " : "h-38.5 lg:h-36.5"}  
       ${isLast && " rounded-r-lg"}
       min-w-39.75 bg-foreware-3
     text-white px-6 py-4`}

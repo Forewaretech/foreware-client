@@ -9,6 +9,7 @@ const OurStory = () => {
       <TileContent
         heading="Leading from the Front"
         highlightText="Our Story"
+        image={about_1}
         content={
           <div>
             <p>
@@ -38,7 +39,6 @@ const OurStory = () => {
             </p>
           </div>
         }
-        image={about_1}
       />
     </section>
   );
