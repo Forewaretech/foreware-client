@@ -7,19 +7,19 @@ import Button from "../Buttons/Button";
 const navigations = [
   {
     text: "About Us",
-    href: "",
+    href: "/about",
   },
   {
     text: "Our Services",
-    href: "",
+    href: "/services",
   },
   {
     text: "Insight",
-    href: "",
+    href: "/insights",
   },
   {
     text: "Career",
-    href: "",
+    href: "/careers",
   },
 ];
 
@@ -36,9 +36,13 @@ const Navigations = () => {
         return (
           <li key={text}>
             <Link
-              className={`${isActive ? "border-[#D9D9D9] bg-[#F2F2F2]" : ""} 
+              className={`${
+                isActive
+                  ? "border-[#D9D9D9] bg-[#F2F2F2] font-semibold"
+                  : "border-transparent"
+              } 
               py-2 px-4 rounded-lg text-xs duration-300 
-              border-transparent border
+               border
              hover:border-[#D9D9D9]  hover:bg-[#F2F2F2]`}
               href={href}
             >

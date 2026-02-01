@@ -5,6 +5,7 @@ import Button from "../Buttons/Button";
 import Logo from "../Generics/Logo";
 import Navigations from "../Navigations/Navigations";
 import { useState } from "react";
+import Link from "next/link";
 
 const BannerNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,9 @@ const BannerNav = () => {
           className=" flex items-center justify-between min-w-full
         lg:min-w-fit"
         >
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
 
           {/* Mobile Menu Toggle */}
           <button

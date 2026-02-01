@@ -6,8 +6,8 @@ const Partners = () => {
   return (
     <section className=" container">
       <section
-        className="py-20 flex flex-col justify-between gap-10 items-center
-      lg:flex-row lg:items-end"
+        className="flex flex-col justify-between gap-10 items-center
+      lg:flex-row lg:items-end lg:py-20"
       >
         <div>
           <HighlightButton>Our Partners</HighlightButton>
