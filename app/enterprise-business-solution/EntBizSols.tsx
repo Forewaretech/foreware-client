@@ -1,12 +1,11 @@
 import ArticleCard from "../components/Blogs/ArticleCard";
 
-import erp_solutions from "@/public/images/enterprise_biz_sols/erp_solutions.png";
 import crm_solutions from "@/public/images/enterprise_biz_sols/crm_solutions.png";
-import hr_solutions from "@/public/images/enterprise_biz_sols/hr_solutions.png";
-import grc_solutions from "@/public/images/enterprise_biz_sols/grc_solutions.png";
 import e_commer_solutions from "@/public/images/enterprise_biz_sols/e-commer-solutions.png";
+import erp_solutions from "@/public/images/enterprise_biz_sols/erp_solutions.png";
+import grc_solutions from "@/public/images/enterprise_biz_sols/grc_solutions.png";
+import hr_solutions from "@/public/images/enterprise_biz_sols/hr_solutions.png";
 import retail_pos_solutions from "@/public/images/enterprise_biz_sols/retail_pos_solutions.png";
-import { section } from "framer-motion/client";
 
 const bizSols = [
   {
@@ -73,8 +72,10 @@ const EntBizSols = () => {
               image={image}
               content={
                 <div>
-                  {content.map((text) => (
-                    <p className="my-4">{text}</p>
+                  {content.map((text, i) => (
+                    <p key={i} className="my-4">
+                      {text}
+                    </p>
                   ))}
                 </div>
               }
