@@ -46,7 +46,7 @@ const cusSols = [
 
 const CusSoftSols = () => {
   return (
-    <section className="pt-20">
+    <section className="lg:pt-10">
       <GridArticles articles={cusSols} />
     </section>
   );

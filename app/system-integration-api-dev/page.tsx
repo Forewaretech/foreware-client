@@ -30,7 +30,8 @@ const SystemIntegrationApiDevPage = () => {
           image={sys_int_api}
           heading={"Systems Integration & API Development"}
           highlightText={"Overview"}
-          imageClassName="-"
+          imageClassName="
+          lg:max-h-[350px]"
           content={
             <div>
               <p className="my-4">

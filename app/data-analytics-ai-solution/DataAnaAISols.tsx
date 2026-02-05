@@ -47,7 +47,7 @@ const dataMLAISols = [
 
 const DataAnaAISols = () => {
   return (
-    <section className="pt-20">
+    <section className="lg:pt-10">
       <GridArticles articles={dataMLAISols} />
     </section>
   );

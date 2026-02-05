@@ -6,7 +6,7 @@ import Button from "../Buttons/Button";
 
 interface Props {
   highlightText?: string;
-  heading: string;
+  heading?: string;
   center?: boolean;
   variant?: "white";
   className?: string;
@@ -38,9 +38,11 @@ const HeaderContent = ({
         </div>
       )}
 
-      <div className="py-4 font-semibold">
-        <Heading variant="h2">{heading}</Heading>
-      </div>
+      {heading && (
+        <div className="py-4 font-semibold">
+          <Heading variant="h2">{heading}</Heading>
+        </div>
+      )}
       <div className="text-xl">{children}</div>
       {buttonText && (
         <div className={`${center && "flex justify-center items-center"} my-4`}>

@@ -44,7 +44,7 @@ const iTSupportSols = [
 
 const ITSupportSols = () => {
   return (
-    <section>
+    <section className="lg:pt-10">
       <GridArticles articles={iTSupportSols} />
     </section>
   );

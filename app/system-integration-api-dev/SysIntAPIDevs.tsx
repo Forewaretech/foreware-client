@@ -38,7 +38,7 @@ const sysIntAPIDevSols = [
 
 const SysIntAPIDevs = () => {
   return (
-    <section className="pt-20">
+    <section className="lg:pt-10">
       <GridArticles articles={sysIntAPIDevSols} />
     </section>
   );
