@@ -7,6 +7,7 @@ import FooterS from "./FooterS";
 import FooterSolutions from "./FooterSolutions";
 import Socials from "./Socials";
 import BaseSpacing from "../Spacing/BaseSpacing";
+import FooterContactUs from "./FooterContactUs";
 
 const Footer = () => {
   return (
@@ -23,49 +24,7 @@ const Footer = () => {
             <FooterInsights />
           </div>
         </div>
-        {/* <SectionSpacing /> */}
-
-        <div className=" border-t-[0.2px] container py-20">
-          <Button>Contact Us</Button>
-          <div
-            className="flex mt-5 flex-col gap-6
-          lg:flex-row"
-          >
-            <div className="w-1/2 flex flex-col gap-6">
-              <div className="flex gap-4">
-                <Phone className=" text-white" />
-                <div>
-                  <p className=" font-bold clear-both text-white">Phone</p>
-                  <p className=" text-white/90">+234 816 4699 021</p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <Mail size={20} color="currentColor" className=" text-white" />
-                <div>
-                  <p className=" font-bold clear-both text-white">Email</p>
-                  <p className=" text-white/90">
-                    info@forewaretechnologies.com
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="w-1/2 flex flex-col gap-6">
-              <div className="flex gap-4">
-                <MapPin size={20} className=" text-white" />
-                <div>
-                  <p className=" font-bold clear-both text-white">
-                    Office Address
-                  </p>
-                  <p className=" text-white/90">
-                    Nurudeen Street, Anifowoshe, Ikeja, Lagos, Nigeria
-                  </p>
-                </div>
-              </div>
-              <Socials />
-            </div>
-          </div>
-        </div>
+        <FooterContactUs />
       </div>
       <FooterBottom />
     </footer>
