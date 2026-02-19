@@ -43,7 +43,9 @@ const HeaderContent = ({
           <Heading variant="h2">{heading}</Heading>
         </div>
       )}
-      <div className="text-xl">{children}</div>
+      <div className={`${center ? " text-center" : "text-justify"} text-xl`}>
+        {children}
+      </div>
       {buttonText && (
         <div className={`${center && "flex justify-center items-center"} my-4`}>
           <Button>{buttonText}</Button>
