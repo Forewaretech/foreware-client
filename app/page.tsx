@@ -5,7 +5,6 @@ import SectionSpacing from "./components/Spacing/SectionSpacing";
 import TechBusinessForward from "./components/TechBusinessForward/TechBusinessForward";
 import TestimonialsPreview from "./components/Testimonial/TestimonialsPreview";
 import DigitalTransformers from "./components/Transformers/DigitalTransformers";
-import OurServices from "./components/Services/OurServices";
 import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 
 export default function Home() {
