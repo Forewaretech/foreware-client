@@ -54,9 +54,9 @@ const BannerNav = () => {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden lg:block">
+        <Link href="/contact" className="hidden lg:block">
           <Button>Contact Us</Button>
-        </div>
+        </Link>
       </nav>
 
       {/* Mobile Navigation Dropdown */}

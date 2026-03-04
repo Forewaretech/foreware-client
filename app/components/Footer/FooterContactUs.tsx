@@ -1,11 +1,14 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import Button from "../Buttons/Button";
 import Socials from "./Socials";
+import Link from "next/link";
 
 const FooterContactUs = () => {
   return (
     <div className=" border-t-[0.2px] container py-20">
-      <Button>Contact Us</Button>
+      <Link href="/contact">
+        <Button>Contact Us</Button>
+      </Link>
       <div
         className="flex mt-5 flex-col gap-6
         lg:flex-row"

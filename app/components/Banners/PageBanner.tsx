@@ -12,6 +12,7 @@ interface Props {
   heading: string;
   text: string;
   slidres?: string[];
+  href?: string;
 }
 
 const PageBanner = ({
@@ -20,6 +21,7 @@ const PageBanner = ({
   text,
   buttonText,
   slidres,
+  href,
 }: Readonly<Props>) => {
   return (
     <div className=" h-167.25 relative">
@@ -39,6 +41,7 @@ const PageBanner = ({
             heading={heading}
             text={text}
             buttonText={buttonText}
+            href={href}
           />
         </div>
 

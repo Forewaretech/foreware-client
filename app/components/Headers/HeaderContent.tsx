@@ -3,6 +3,7 @@ import HighlightButton from "../Buttons/HighlightButton";
 import Heading from "./Headings";
 import clsx from "clsx";
 import Button from "../Buttons/Button";
+import Link from "next/link";
 
 interface Props {
   highlightText?: string;
@@ -11,6 +12,7 @@ interface Props {
   variant?: "white";
   className?: string;
   buttonText?: string;
+  href?: string;
 }
 
 const HeaderContent = ({
@@ -21,6 +23,7 @@ const HeaderContent = ({
   variant,
   className,
   buttonText,
+  href,
 }: Readonly<PropsWithChildren<Props>>) => {
   return (
     <header
@@ -47,9 +50,12 @@ const HeaderContent = ({
         {children}
       </div>
       {buttonText && (
-        <div className={`${center && "flex justify-center items-center"} my-4`}>
+        <Link
+          href={`${href ? href : ""}`}
+          className={`${center && "flex justify-center items-center"} my-4`}
+        >
           <Button>{buttonText}</Button>
-        </div>
+        </Link>
       )}
     </header>
   );

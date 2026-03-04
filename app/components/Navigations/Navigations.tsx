@@ -53,7 +53,9 @@ const Navigations = () => {
       })}
 
       <li className=" lg:hidden">
-        <Button>Contact Us</Button>
+        <Link href="/contact">
+          <Button>Contact Us</Button>
+        </Link>
       </li>
     </ul>
   );

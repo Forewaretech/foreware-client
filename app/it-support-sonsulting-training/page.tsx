@@ -21,6 +21,7 @@ const ITSupportConsultingTrainingPage = () => {
           "Practical technology support that helps your business run smoothly and stay secure."
         }
         buttonText="Contact Us"
+        href="/contact"
       />
       <SectionSpacing />
       <section className="container">
@@ -37,6 +38,7 @@ const ITSupportConsultingTrainingPage = () => {
         <ITSupportSols />
         <SectionSpacing />
         <HeaderContent
+          href="/contact"
           buttonText="Contact Us"
           heading="Let's Support Your IT Environment"
           center

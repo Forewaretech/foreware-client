@@ -1,5 +1,7 @@
 import HomeBanner from "./components/Banners/HomeBanner";
 import BlogsPreview from "./components/Blogs/BlogsPreview";
+import PopUpForm from "./components/Form/PopUpForm";
+import PopUpFormClient from "./components/Form/PopUpFormClient";
 import Partners from "./components/Partners/Partners";
 import SectionSpacing from "./components/Spacing/SectionSpacing";
 import TechBusinessForward from "./components/TechBusinessForward/TechBusinessForward";

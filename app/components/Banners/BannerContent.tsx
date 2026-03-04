@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "../Buttons/Button";
 import Heading from "../Headers/Headings";
 
@@ -5,9 +6,15 @@ interface Props {
   heading: string;
   text: string;
   buttonText?: string;
+  href?: string;
 }
 
-const BannerContent = ({ heading, text, buttonText }: Readonly<Props>) => {
+const BannerContent = ({
+  heading,
+  text,
+  buttonText,
+  href,
+}: Readonly<Props>) => {
   return (
     <section
       className=" bg-black/80 p-10 rounded-lg text-white
@@ -15,7 +22,11 @@ const BannerContent = ({ heading, text, buttonText }: Readonly<Props>) => {
     >
       <Heading variant="h2">{heading}</Heading>
       <p className=" text-xl py-4">{text}</p>
-      {buttonText && <Button>{buttonText}</Button>}
+      {buttonText && (
+        <Link href={href || ""}>
+          <Button>{buttonText}</Button>
+        </Link>
+      )}
     </section>
   );
 };

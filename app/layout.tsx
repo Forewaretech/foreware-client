@@ -3,6 +3,8 @@ import { Lexend } from "next/font/google";
 import TopHeader from "./components/Headers/TopHeader";
 import Footer from "./components/Footer/Footer";
 import "./globals.css";
+import QueryProvider from "./providers/QueryProvider";
+import PopUpFormClient from "./components/Form/PopUpFormClient";
 
 const lexendSans = Lexend({
   variable: "--font-lexand-sans",
@@ -24,11 +26,11 @@ export default async function RootLayout({
   // Fetch both header and body snippets
   const [headerRes, bodyRes] = await Promise.all([
     fetch(
-      `${process.env.API_URL}/${trackingCodesPath}/public/tracking?placement=header`,
+      `${process.env.FOREWARE_API_URL}/${trackingCodesPath}/public/tracking?placement=header`,
       { cache: "no-store" },
     ),
     fetch(
-      `${process.env.API_URL}/${trackingCodesPath}/public/tracking?placement=body`,
+      `${process.env.FOREWARE_API_URL}/${trackingCodesPath}/public/tracking?placement=body`,
       { cache: "no-store" },
     ),
   ]);
@@ -58,12 +60,17 @@ export default async function RootLayout({
       <body className={`${lexendSans.variable} antialiased`}>
         <TopHeader />
 
-        {children}
+        <QueryProvider>
+          <>{children}</>
+          <PopUpFormClient />
+        </QueryProvider>
 
         {/* Body Snippets: 
            We use a Fragment-like approach to avoid extra <div>s 
            unless the snippet itself requires one.
         */}
+        <Footer />
+
         {bodyScripts?.data?.map((item: any) => (
           <script
             key={item.id}
@@ -73,8 +80,6 @@ export default async function RootLayout({
             }}
           />
         ))}
-
-        <Footer />
       </body>
     </html>
   );

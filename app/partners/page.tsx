@@ -63,6 +63,7 @@ const PartnersPage = () => {
         <SuitedFor />
         <SectionSpacing />
         <HeaderContent
+          href="/contact"
           buttonText="Contact Us"
           heading="Let's Talk About Odoo"
           center
