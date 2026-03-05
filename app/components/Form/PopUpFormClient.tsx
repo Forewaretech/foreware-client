@@ -3,6 +3,8 @@
 import useMyForms from "@/app/hooks/form/useForms";
 import PopUpForm from "./PopUpForm";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { shouldShowForm } from "./shouldShowForm";
 
 const PopUpFormClient = () => {
   const { data } = useMyForms();
@@ -10,17 +12,23 @@ const PopUpFormClient = () => {
 
   const formData = data ? data.data : [];
 
-  console.log("FORM DATA: ", formData);
+  const [activeForm, setActiveForm] = useState<any>(null);
 
-  const formToShow = formData.find((form) =>
-    form.assignedPages?.includes(pathname),
-  );
+  useEffect(() => {
+    if (!formData.length) return;
 
-  return (
-    <div>
-      <PopUpForm form={formToShow} onClose={() => {}} />
-    </div>
-  );
+    const formToShow = formData.find((form) =>
+      form.assignedPages?.includes(pathname),
+    );
+
+    if (!formToShow) return;
+
+    if (!shouldShowForm(formToShow)) return;
+
+    setActiveForm(formToShow);
+  }, [formData, pathname]);
+
+  return <PopUpForm form={activeForm} onClose={() => setActiveForm(null)} />;
 };
 
 export default PopUpFormClient;
