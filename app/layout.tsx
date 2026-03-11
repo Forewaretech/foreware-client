@@ -23,23 +23,33 @@ export default async function RootLayout({
 }>) {
   const trackingCodesPath = "tracking-codes";
 
-  // Fetch both header and body snippets
-  const [headerRes, bodyRes] = await Promise.all([
-    fetch(
-      `${process.env.FOREWARE_API_URL}/${trackingCodesPath}/public/tracking?placement=header`,
-      { cache: "no-store" },
-    ),
-    fetch(
-      `${process.env.FOREWARE_API_URL}/${trackingCodesPath}/public/tracking?placement=body`,
-      { cache: "no-store" },
-    ),
-  ]);
+  // 1. Initialize empty fallbacks
+  let headerScripts = { data: [] };
+  let bodyScripts = { data: [] };
 
-  const headerScripts = await headerRes.json();
-  const bodyScripts = await bodyRes.json();
+  try {
+    // 2. Fetch with a timeout or standard Promise.all
+    const [headerRes, bodyRes] = await Promise.all([
+      fetch(
+        `${process.env.FOREWARE_API_URL}/${trackingCodesPath}/public/tracking?placement=header`,
+        { cache: "no-store" },
+      ),
+      fetch(
+        `${process.env.FOREWARE_API_URL}/${trackingCodesPath}/public/tracking?placement=body`,
+        { cache: "no-store" },
+      ),
+    ]);
+
+    // 3. Only parse if the responses are actually OK
+    if (headerRes.ok) headerScripts = await headerRes.json();
+    if (bodyRes.ok) bodyScripts = await bodyRes.json();
+  } catch (error) {
+    // 4. Log the error for your internal tracking, but don't crash the UI
+    console.error("Failed to fetch tracking scripts:", error);
+  }
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Standard HTML <head> tag. 
           We render the raw snippets directly here.
@@ -57,7 +67,10 @@ export default async function RootLayout({
           />
         ))}
       </head>
-      <body className={`${lexendSans.variable} antialiased`}>
+      <body
+        className={`${lexendSans.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <TopHeader />
 
         <QueryProvider>
@@ -65,10 +78,6 @@ export default async function RootLayout({
           <PopUpFormClient />
         </QueryProvider>
 
-        {/* Body Snippets: 
-           We use a Fragment-like approach to avoid extra <div>s 
-           unless the snippet itself requires one.
-        */}
         <Footer />
 
         {bodyScripts?.data?.map((item: any) => (

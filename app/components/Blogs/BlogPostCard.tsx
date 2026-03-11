@@ -1,17 +1,21 @@
-import Image, { StaticImageData } from "next/image";
-import BaseSpacing from "../Spacing/BaseSpacing";
+import { PostType } from "@/app/hooks/posts/postService";
+import Image from "next/image";
 import Link from "next/link";
+import BaseSpacing from "../Spacing/BaseSpacing";
 
 interface Props {
-  title: string;
-  shortDescription: string;
-  image: StaticImageData | string;
+  post: PostType;
 }
 
-const BlogPostCard = ({ title, shortDescription, image }: Readonly<Props>) => {
+const BlogPostCard = ({ post }: Readonly<Props>) => {
   return (
     <article className="group relative h-60 rounded-lg overflow-hidden cursor-default">
-      <Image src={image} alt={title} fill className="object-cover" />
+      <Image
+        src={post.featuredImage}
+        alt={post.featuredImageTitle || post.title}
+        fill
+        className="object-cover"
+      />
 
       {/* Overlay */}
       <div
@@ -22,19 +26,22 @@ const BlogPostCard = ({ title, shortDescription, image }: Readonly<Props>) => {
           translate-y-[60%] group-hover:translate-y-0
         "
       >
-        <h2 className="font-bold">{title}</h2>
+        <h2 className="font-bold line-clamp-2">{post.title}</h2>
 
         {/* Hidden content */}
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <BaseSpacing />
-          <p className="text-xs">{shortDescription}</p>
+          <p className="text-xs line-clamp-3">{post.summary}</p>
           <BaseSpacing />
           <div
             className="pt-4 text-xs flex items-center justify-between 
             border-t-[0.5px] border-gray-800"
           >
             <p className="opacity-80">2-Oct-2025</p>
-            <Link href="" className="hover:opacity-100 opacity-80 duration-300">
+            <Link
+              href={`blog/${post.slug}`}
+              className="hover:opacity-100 opacity-80 duration-300"
+            >
               Read more
             </Link>
           </div>

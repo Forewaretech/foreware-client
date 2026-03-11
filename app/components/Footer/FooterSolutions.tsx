@@ -6,7 +6,7 @@ const FooterSolutions = () => {
   return (
     <div>
       <Heading variant="h4" textColor="white">
-        Solutions
+        Services
       </Heading>
       <BaseSpacing />
       <div className=" flex flex-col gap-4 text-white font-light">

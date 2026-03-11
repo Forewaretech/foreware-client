@@ -12,7 +12,7 @@ const FooterInsights = () => {
       </Heading>
       <BaseSpacing />
       <div className=" flex flex-col gap-4 text-white font-light">
-        <QuickLink href="/careers">Blogs</QuickLink>
+        <QuickLink href="/blog">Blogs</QuickLink>
         <QuickLink href="/careers">Customer Stories</QuickLink>
         <QuickLink href="/careers">Downloads</QuickLink>
         <QuickLink href="/careers">Events</QuickLink>
