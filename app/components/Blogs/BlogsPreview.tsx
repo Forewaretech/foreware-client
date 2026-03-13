@@ -24,7 +24,7 @@ const BlogsPreview = async () => {
           <section>
             <div
               className="container flex flex-col gap-4 lg:items-end justify-between
-        lg:flex-row"
+            lg:flex-row"
             >
               <div>
                 <HeaderContent highlightText="Blog" heading="News & Insights">

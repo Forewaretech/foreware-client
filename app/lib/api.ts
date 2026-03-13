@@ -19,3 +19,24 @@ export const getPublishedPosts = async (): Promise<PostType[]> => {
     return [];
   }
 };
+
+export const getSinglePost = async (
+  id: string,
+): Promise<PostType | undefined> => {
+  try {
+    const res = await fetch(
+      `${process.env.FOREWARE_API_URL}/posts/${id}?status=PUBLISHED`,
+      {
+        next: { tags: ["posts", id] }, // Allows you to revalidate later
+      },
+    );
+
+    if (!res.ok) return undefined;
+
+    const json = await res.json();
+    return json.data || undefined;
+  } catch (error) {
+    console.error("Failed to load posts: ", error);
+    return undefined;
+  }
+};

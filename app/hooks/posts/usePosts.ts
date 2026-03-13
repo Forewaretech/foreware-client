@@ -3,9 +3,12 @@ import { postQueries } from "./postQueries";
 import { PostType } from "./postService";
 
 interface Props {
-  intitialData?: PostType[];
+  intitialData?: { data: PostType[] };
 }
 
-const usePosts = (o?: Props) => useQuery(postQueries.allPublishedPosts());
+const usePosts = (options: Props) =>
+  useQuery(
+    postQueries.allPublishedPosts({ initialData: options.intitialData }),
+  );
 
 export default usePosts;

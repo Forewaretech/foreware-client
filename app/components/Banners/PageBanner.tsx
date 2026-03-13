@@ -28,7 +28,7 @@ const PageBanner = ({
       <Image
         src={bannerImage.image}
         alt={bannerImage.alt}
-        width={1200}
+        width={1600}
         height={800}
         className="w-full h-full object-cover"
       />

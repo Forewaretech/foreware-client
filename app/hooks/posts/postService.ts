@@ -10,17 +10,16 @@ export type PostType = {
   title: string;
   summary: string;
   slug: string;
+  content?: string;
+  category?: string;
   status?: StatusEnum;
   featuredImage: string;
   featuredImageTitle?: string;
   featuredImageCaption?: string;
-  content?: string;
   seoTitle?: string;
   seoDescription?: string;
-  category?: string;
   user?: { name: string };
   createdAt?: string;
-  updatedAt?: string;
 };
 
 const postService = createResourceApi<PostType>("posts");

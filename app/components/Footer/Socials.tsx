@@ -20,20 +20,22 @@ import instagram_icon from "@/public/icons/instagram_icon.svg";
 const Socials = () => {
   return (
     <div className="flex gap-2 items-center">
-      <Link href="">
-        <IconHolder icon={<Image src={in_icon} alt="X icon" />} />
+      <Link href="https://www.linkedin.com/company/foreware-technologies">
+        <IconHolder icon={<Image src={in_icon} alt="LinkedIn icon" />} />
       </Link>
       <Link href="">
-        <IconHolder icon={<Image src={instagram_icon} alt="X icon" />} />
+        <IconHolder
+          icon={<Image src={instagram_icon} alt="Instagram icon" />}
+        />
       </Link>
       <Link href="">
-        <IconHolder icon={<Image src={facebook_icon} alt="X icon" />} />
+        <IconHolder icon={<Image src={facebook_icon} alt="Facebook icon" />} />
       </Link>
       <Link href="">
         <IconHolder icon={<Image src={x_icon} alt="X icon" />} />
       </Link>
       <Link href="">
-        <IconHolder icon={<Image src={youtube_icon} alt="X icon" />} />
+        <IconHolder icon={<Image src={youtube_icon} alt="Youtube icon" />} />
       </Link>
     </div>
   );

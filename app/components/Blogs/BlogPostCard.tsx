@@ -13,8 +13,8 @@ const BlogPostCard = ({ post }: Readonly<Props>) => {
       <Image
         src={post.featuredImage}
         alt={post.featuredImageTitle || post.title}
-        fill
         className="object-cover"
+        fill
       />
 
       {/* Overlay */}
@@ -39,7 +39,7 @@ const BlogPostCard = ({ post }: Readonly<Props>) => {
           >
             <p className="opacity-80">2-Oct-2025</p>
             <Link
-              href={`blog/${post.slug}`}
+              href={`/insights/blog/${post.slug}`}
               className="hover:opacity-100 opacity-80 duration-300"
             >
               Read more

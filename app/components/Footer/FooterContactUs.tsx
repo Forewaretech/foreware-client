@@ -2,6 +2,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import Button from "../Buttons/Button";
 import Socials from "./Socials";
 import Link from "next/link";
+import { ADDRESS, EMAIL, PHONE } from "@/app/lib/constants";
 
 const FooterContactUs = () => {
   return (
@@ -21,7 +22,7 @@ const FooterContactUs = () => {
             <Phone className=" text-white min-w-5" />
             <div>
               <p className=" font-bold clear-both text-white">Phone</p>
-              <p className=" text-white/90">+234 816 4699 021</p>
+              <p className=" text-white/90">{PHONE}</p>
             </div>
           </div>
 
@@ -33,7 +34,7 @@ const FooterContactUs = () => {
             />
             <div>
               <p className=" font-bold clear-both text-white">Email</p>
-              <p className=" text-white/90">info@forewaretechnologies.com</p>
+              <p className=" text-white/90">{EMAIL}</p>
             </div>
           </div>
         </div>
@@ -45,9 +46,7 @@ const FooterContactUs = () => {
             <MapPin size={20} className=" text-white min-w-5" />
             <div>
               <p className=" font-bold clear-both text-white">Office Address</p>
-              <p className=" text-white/90">
-                Nurudeen Street, Anifowoshe, Ikeja, Lagos, Nigeria
-              </p>
+              <p className=" text-white/90">{ADDRESS}</p>
             </div>
           </div>
           <Socials />

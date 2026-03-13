@@ -10,9 +10,9 @@ const FooterBottom = () => {
     >
       <p>© 2025 | Foreware. All rights reserved.</p>
       <div className=" flex  items-center gap-4">
-        <Link href="">Terms and Conditions</Link>
-        <Link href="">Privacy Policy</Link>
-        <Link href="">Cookies</Link>
+        <Link href="/terms-condition">Terms and Conditions</Link>
+        <Link href="/privacy-policy">Privacy Policy</Link>
+        <Link href="/privacy-policy/#cookies-&-tracking">Cookies</Link>
       </div>
     </div>
   );

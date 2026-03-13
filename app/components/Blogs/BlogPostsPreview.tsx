@@ -1,18 +1,18 @@
 "use client";
 
-import usePosts from "@/app/hooks/posts/usePosts";
-import BlogPostCard from "./BlogPostCard";
 import { PostType } from "@/app/hooks/posts/postService";
-import { useRef } from "react";
-import { ArrowLeft, ArrowRight, ArrowRight2 } from "iconsax-react";
-import NavButton from "../Buttons/NavButton";
+import usePosts from "@/app/hooks/posts/usePosts";
+import { ArrowRight2 } from "iconsax-react";
 import Link from "next/link";
+import { useRef } from "react";
+import NavButton from "../Buttons/NavButton";
+import BlogPostCard from "./BlogPostCard";
 
 interface Props {
   intitialData?: PostType[];
 }
 
-const BlogSkeleton = () => (
+export const BlogSkeleton = () => (
   <div className="min-w-[calc(100%-24px)] lg:w-1/4 lg:min-w-1/4 animate-pulse">
     <div className="aspect-video w-full bg-gray-200 rounded-lg mb-4" />
     <div className="h-4 w-3/4 bg-gray-200 rounded mb-2" />
@@ -59,7 +59,7 @@ const BlogPostsPreview = ({ intitialData }: Readonly<Props>) => {
       <div className="flex gap-4 items-center mb-8 justify-between container">
         <div>
           <Link
-            href="/blog"
+            href="/insights/blog"
             className="flex gap-1 items-center text-primary font-light"
           >
             <span>View All</span>

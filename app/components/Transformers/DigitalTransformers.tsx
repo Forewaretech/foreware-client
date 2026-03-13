@@ -5,6 +5,7 @@ import digital_transformers from "@/public/images/digital_transformers.png";
 import Heading from "../Headers/Headings";
 import BaseSpacing from "../Spacing/BaseSpacing";
 import Button from "../Buttons/Button";
+import Link from "next/link";
 
 const DigitalTransformers = () => {
   return (
@@ -37,7 +38,9 @@ const DigitalTransformers = () => {
               your challenges, explore what's possible, and map out how
               technology can accelerate your business goals.
             </p>
-            <Button>Get Started Today</Button>
+            <Link href="/contact">
+              <Button>Get Started Today</Button>
+            </Link>
           </div>
         </div>
       </div>

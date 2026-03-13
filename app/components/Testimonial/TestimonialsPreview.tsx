@@ -3,7 +3,7 @@ import Testimonials from "../testimonials/Testimonials";
 
 const TestimonialsPreview = () => {
   return (
-    <section className="container py-20 bg-[#F2F2F2]">
+    <section id="success-stories" className="container py-20 bg-[#F2F2F2]">
       <header>
         <HeaderContent
           heading="Proven Results Across Industries."
