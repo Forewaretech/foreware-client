@@ -8,7 +8,7 @@ const FooterBottom = () => {
       
       lg:flex-row"
     >
-      <p>© 2025 | Foreware. All rights reserved.</p>
+      <p>© {new Date().getFullYear()} | Foreware. All rights reserved.</p>
       <div className=" flex  items-center gap-4">
         <Link href="/terms-condition">Terms and Conditions</Link>
         <Link href="/privacy-policy">Privacy Policy</Link>

@@ -73,9 +73,9 @@ const DownloadsPage = () => {
               className="group bg-white border border-line rounded-2xl p-6 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-bg-2 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                {/* <div className="w-12 h-12 rounded-xl bg-bg-2 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
                   {item.icon}
-                </div>
+                </div> */}
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="font-bold text-dark-1">{item.title}</h3>
                   <span className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded font-bold uppercase">

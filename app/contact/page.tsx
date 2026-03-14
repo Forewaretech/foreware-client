@@ -1,12 +1,11 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import PageBanner from "../components/Banners/PageBanner";
-import Button from "../components/Buttons/Button";
-import { services } from "../components/Footer/FooterSolutions";
 import Socials from "../components/Footer/Socials";
 import SectionSpacing from "../components/Spacing/SectionSpacing";
 
 import contact_us_banner from "@/public/images/banners/contact_us_banner.jpg";
 import { ADDRESS, EMAIL, PHONE } from "../lib/constants";
+import ContactForm from "./ContactForm";
 
 const ContactPage = () => {
   return (
@@ -17,7 +16,8 @@ const ContactPage = () => {
           alt: "Contact Foreware support team",
         }}
         heading="Let's Connect"
-        text="Ready to secure your digital assets or start a new project? Reach out to our expert team for tailored solutions and technical guidance."
+        text="Ready to secure your digital assets or start a new project? Reach out to our 
+        expert team for tailored solutions and technical guidance."
       />
       <SectionSpacing />
 
@@ -91,58 +91,7 @@ const ContactPage = () => {
 
           {/* Right Side: Contact Form */}
           <div className="bg-white border border-line rounded-2xl p-8 md:p-10 shadow-sm">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-[11px] font-bold uppercase text-gray-500 ml-1">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="John Doe"
-                    className="w-full bg-bg-2 border border-line rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-[11px] font-bold uppercase text-gray-500 ml-1">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="john@example.com"
-                    className="w-full bg-bg-2 border border-line rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-[11px] font-bold uppercase text-gray-500 ml-1">
-                  Subject
-                </label>
-                <select className="w-full bg-bg-2 border border-line rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors appearance-none">
-                  {services.map(({ text }) => (
-                    <option key={text} value={text}>
-                      {text}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-[11px] font-bold uppercase text-gray-500 ml-1">
-                  Message
-                </label>
-                <textarea
-                  rows={5}
-                  placeholder="Tell us about your project..."
-                  className="w-full bg-bg-2 border border-line rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors resize-none"
-                ></textarea>
-              </div>
-
-              <Button className="w-full py-4 flex items-center justify-center gap-2">
-                Send Message
-              </Button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </div>
