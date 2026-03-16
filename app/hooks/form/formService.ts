@@ -45,13 +45,13 @@ export const formFieldSchema = z.object({
 
 export const createFormSchema = z.object({
   name: z.string().min(1),
-  trigger_type: z.nativeEnum(TriggerEnum),
-  banner_image: z.string().url().optional(),
-  thank_you_message: z.string().optional(),
+  triggerType: z.nativeEnum(TriggerEnum),
+  bannerImage: z.string().url().optional(),
+  thankYouMessage: z.string().optional(),
   status: z.nativeEnum(FormStatusEnum).optional(),
 
-  target_emails: z.array(z.string().email()).min(1),
-  assigned_pages: z.array(z.string()).optional(),
+  targetEmails: z.array(z.string().email()).min(1),
+  assignedPages: z.array(z.string()).optional(),
 
   fields: z.array(formFieldSchema).min(1),
 });
@@ -66,7 +66,9 @@ export const updateFormSchema = createFormSchema.partial().extend({
     .optional(),
 });
 
-export type FormType = z.infer<typeof createFormSchema>;
+export type FormType = z.infer<typeof createFormSchema> & {
+  thankYouMessage: string;
+};
 export type FormUpdateType = z.infer<typeof updateFormSchema>;
 export type FormField = z.infer<typeof formFieldSchema>;
 

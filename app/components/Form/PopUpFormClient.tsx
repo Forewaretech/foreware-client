@@ -5,6 +5,7 @@ import PopUpForm from "./PopUpForm";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { shouldShowForm } from "./shouldShowForm";
+import { FormType } from "@/app/hooks/form/formService";
 
 const PopUpFormClient = () => {
   const { data } = useMyForms();
@@ -17,7 +18,7 @@ const PopUpFormClient = () => {
   useEffect(() => {
     if (!formData.length) return;
 
-    const formToShow = formData.find((form) =>
+    const formToShow = formData.find((form: FormType) =>
       form.assignedPages?.includes(pathname),
     );
 
