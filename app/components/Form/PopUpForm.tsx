@@ -17,13 +17,13 @@ export interface FormItem {
   id?: string;
   name: string;
   fields: FormField[];
-  thank_you_message: string;
-  target_emails?: string[];
+  thankYouMessage: string;
+  targetEmails?: string[];
   status?: string;
-  trigger_type?: string;
-  assigned_pages?: string[];
+  triggerType?: string;
+  assignedPages?: string[];
   submissions?: number;
-  banner_image?: string;
+  bannerImage?: string;
   displayBehavior?: "ALWAYS" | "ONCE_PER_BROWSER" | "ONCE_PER_SESSION";
   closeBehavior?:
     | "SHOW_AGAIN"
@@ -175,9 +175,9 @@ function PopUpForm({
               transition={{ duration: 0.35, ease: "easeOut" }}
             >
               <div className="mt-2 border border-gray-200 rounded-lg overflow-hidden">
-                {form.banner_image && (
+                {form.bannerImage && (
                   <img
-                    src={form.banner_image}
+                    src={form.bannerImage}
                     alt="Banner"
                     className="w-full h-36 object-cover"
                   />
