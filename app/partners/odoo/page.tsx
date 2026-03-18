@@ -1,15 +1,16 @@
-import PageBanner from "../components/Banners/PageBanner";
+import PageBanner from "../../components/Banners/PageBanner";
 
 import odoo_banner from "@/public/images/banners/odoo_banner.png";
-import SectionSpacing from "../components/Spacing/SectionSpacing";
-import HeaderContent from "../components/Headers/HeaderContent";
-import TileContent from "../components/Headers/TileContent";
-import Heading from "../components/Headers/Headings";
+import SectionSpacing from "../../components/Spacing/SectionSpacing";
+import HeaderContent from "../../components/Headers/HeaderContent";
+import TileContent from "../../components/Headers/TileContent";
+import Heading from "../../components/Headers/Headings";
 
-import BaseSpacing from "../components/Spacing/BaseSpacing";
+import BaseSpacing from "../../components/Spacing/BaseSpacing";
 
 import odoo_overivew from "@/public/images/partners/odoo_overivew.png";
-import SuitedFor from "./SuitedFor";
+import SuitedFor from "./OdooSuitedFor";
+import ListDisc from "@/app/components/List/ListDisc";
 
 const PartnersPage = () => {
   return (
@@ -27,9 +28,15 @@ const PartnersPage = () => {
 
       <section className="container">
         <SectionSpacing />
+        <HeaderContent
+          highlightText="Overview"
+          heading="Our Odoo Partnership"
+          center
+        />
+        <SectionSpacing />
         <TileContent
           direction="ltr"
-          imageClassName=" lg:max-h-[300px] xl:max-w-[500px]"
+          imageClassName="lg:max-h-[300px] xl:max-w-[500px]"
           image={odoo_overivew}
           content={
             <div>
@@ -44,18 +51,14 @@ const PartnersPage = () => {
                 What clients gain from our Odoo partnership:
               </Heading>
               <BaseSpacing />
-              <ul className=" list-disc">
-                {[
+              <ListDisc
+                items={[
                   "A single system for ERP and CRM",
                   "Better visibility across departments",
                   "Reduced manual work and duplication",
                   "A scalable platform supported locally in Nigeria",
-                ].map((text) => (
-                  <li key={text} className="ml-7">
-                    {text}
-                  </li>
-                ))}
-              </ul>
+                ]}
+              />
             </div>
           }
         />

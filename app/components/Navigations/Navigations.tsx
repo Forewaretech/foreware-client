@@ -24,6 +24,18 @@ const navigations = [
       { text: "Downloads", href: "/insights/downloads" },
     ],
   },
+  {
+    text: "Partners",
+    href: "/partners",
+    children: [
+      { text: "Odoo", href: "/partners/odoo" },
+      { text: "Zoho", href: "/partners/zoho" },
+      { text: "WebHR", href: "/partners/webhr" },
+      { text: "Xero", href: "/partners/xero" },
+      { text: "Wondersoft", href: "/partners/wondersoft" },
+      { text: "Risk Cognizance", href: "/partners/risk-cognizance" },
+    ],
+  },
   { text: "Career", href: "/careers" },
 ];
 
