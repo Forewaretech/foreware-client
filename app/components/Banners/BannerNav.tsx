@@ -63,7 +63,7 @@ const BannerNav = () => {
       <div
         className={`lg:hidden overflow-hidden transition-all duration-300 ease-out
           min-w-full
-          ${isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"}`}
+          ${isOpen ? "max-h-80 overflow-y-scroll has-scrollbar opacity-100" : "max-h-0 opacity-0"}`}
       >
         <nav
           className={`p-4 bg-white/80 backdrop-blur-sm border border-t-0 border-border/50

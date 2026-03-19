@@ -35,7 +35,7 @@ const WondersoftPage = () => {
         <SectionSpacing />
         <TileContent
           direction="ltr"
-          imageClassName=" lg:max-h-[300px] xl:max-w-[500px]"
+          imageClassName="h-[300px]  lg:max-h-[300px] xl:max-w-[500px]"
           image={wondersoft_overview}
           content={
             <div>
@@ -66,27 +66,29 @@ const WondersoftPage = () => {
         />
       </section>
       <SectionSpacing />
-      <section className=" bg-[#F2F2F2] py-20 container">
-        <TileContent
-          imageClassName="lg:max-h-[200px]"
-          content={
-            <div className=" text-base">
-              <Heading variant="h4">
-                Who Wondersoft Is Best Suited For:{" "}
-              </Heading>
-              <BaseSpacing />
-              <ListDisc
-                items={[
-                  "Retail businesses and store chains",
-                  "Supermarkets and pharmacies",
-                  "High-volume retail environments",
-                  "Businesses seeking a reliable Wondersoft partner in Nigeria",
-                ]}
-              />
-            </div>
-          }
-          image={wondersoft_suited_for}
-        />
+      <section className=" bg-[#F2F2F2] py-20">
+        <section className="container">
+          <TileContent
+            imageClassName="h-[300px] lg:max-h-[200px]"
+            content={
+              <div className=" text-base">
+                <Heading variant="h4">
+                  Who Wondersoft Is Best Suited For:{" "}
+                </Heading>
+                <BaseSpacing />
+                <ListDisc
+                  items={[
+                    "Retail businesses and store chains",
+                    "Supermarkets and pharmacies",
+                    "High-volume retail environments",
+                    "Businesses seeking a reliable Wondersoft partner in Nigeria",
+                  ]}
+                />
+              </div>
+            }
+            image={wondersoft_suited_for}
+          />
+        </section>
       </section>
       <section className="container">
         <SectionSpacing />

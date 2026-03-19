@@ -3,9 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Button from "../Buttons/Button";
-
-import { useState } from "react";
-import { ChevronDown } from "lucide-react"; // Optional: npm install lucide-react
+import { useState, useEffect, useRef } from "react";
+import { ChevronDown } from "lucide-react";
 import { services } from "../Footer/FooterSolutions";
 
 const navigations = [
@@ -42,51 +41,84 @@ const navigations = [
 const Navigations = () => {
   const pathname = usePathname();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const navRef = useRef<HTMLUListElement>(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Close dropdown when route changes
+  useEffect(() => {
+    setOpenDropdown(null);
+  }, [pathname]);
+
+  const toggleDropdown = (text: string) => {
+    setOpenDropdown(openDropdown === text ? null : text);
+  };
 
   return (
-    <ul className="flex flex-col items-start gap-4 lg:flex-row lg:items-center lg:gap-2">
+    <ul
+      ref={navRef}
+      className="flex flex-col items-start gap-2 
+      
+      lg:flex-row lg:items-center lg:gap-2 w-full lg:w-auto"
+    >
       {navigations.map((item) => {
         const hasChildren = !!item.children;
+        const isOpen = openDropdown === item.text;
         const isActive =
           pathname === item.href ||
           item.children?.some((child) => pathname === child.href);
 
         return (
-          <li
-            key={item.text}
-            className="relative group w-full lg:w-auto"
-            onMouseEnter={() => setOpenDropdown(item.text)}
-            onMouseLeave={() => setOpenDropdown(null)}
-          >
+          <li key={item.text} className="relative w-full lg:w-auto">
             {hasChildren ? (
-              <div className="flex flex-col">
+              <div className="flex flex-col w-full lg:w-auto">
                 <button
+                  onClick={() => toggleDropdown(item.text)}
                   className={`${
-                    isActive
+                    isActive || isOpen
                       ? "border-[#D9D9D9] bg-[#F2F2F2] font-semibold"
-                      : "border-transparent"
-                  } flex items-center justify-between gap-1 py-2 px-4 rounded-lg text-xs duration-300 border hover:border-[#D9D9D9] hover:bg-[#F2F2F2] w-full lg:w-auto`}
+                      : "border-transparent text-gray-700"
+                  } flex items-center justify-between gap-1 py-2 px-4 rounded-lg text-xs duration-300 border 
+                  hover:border-[#D9D9D9] hover:bg-[#F2F2F2] w-full lg:w-auto text-left`}
                 >
                   {item.text}
                   <ChevronDown
-                    className={`w-3 h-3 transition-transform ${openDropdown === item.text ? "rotate-180" : ""}`}
+                    className={`w-3 h-3 transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
                   />
                 </button>
 
                 {/* Dropdown Menu */}
                 <div
                   className={`
-                  lg:absolute lg:top-full lg:left-0 lg:pt-2 z-50
-                  ${openDropdown === item.text ? "block" : "hidden"}
-                  w-full lg:w-48
-                `}
+                    lg:absolute lg:top-full lg:left-0 lg:pt-2 z-50
+                    ${isOpen ? "flex" : "hidden"}
+                    flex-col w-full lg:w-56
+                  `}
                 >
-                  <ul className="bg-white lg:shadow-xl lg:border border-[#D9D9D9] rounded-xl overflow-hidden p-1 flex flex-col gap-1">
+                  <ul
+                    className="bg-gray-50 lg:bg-white lg:shadow-xl lg:border 
+                  border-[#D9D9D9] rounded-xl overflow-hidden p-1 flex flex-col gap-1 mt-1 lg:mt-0 ml-4 lg:ml-0"
+                  >
                     {item.children?.map((child) => (
                       <li key={child.text}>
                         <Link
                           href={child.href}
-                          className="block px-4 py-2 text-[11px] text-gray-600 hover:bg-[#F2F2F2] rounded-md transition-colors"
+                          className={`block px-4 py-2 text-[11px] rounded-md transition-colors ${
+                            pathname === child.href
+                              ? "bg-[#F2F2F2] font-bold text-black"
+                              : "text-gray-600 hover:bg-[#F2F2F2]"
+                          }`}
                         >
                           {child.text}
                         </Link>
@@ -100,7 +132,7 @@ const Navigations = () => {
                 className={`${
                   isActive
                     ? "border-[#D9D9D9] bg-[#F2F2F2] font-semibold"
-                    : "border-transparent"
+                    : "border-transparent text-gray-700"
                 } block py-2 px-4 rounded-lg text-xs duration-300 border hover:border-[#D9D9D9] hover:bg-[#F2F2F2]`}
                 href={item.href}
               >
@@ -111,12 +143,13 @@ const Navigations = () => {
         );
       })}
 
-      <li className="lg:hidden mt-4">
-        <Link href="/contact">
-          <Button>Contact Us</Button>
+      <li className="lg:hidden mt-4 w-full px-4">
+        <Link href="/contact" className="block w-full">
+          <Button className="w-full">Contact Us</Button>
         </Link>
       </li>
     </ul>
   );
 };
+
 export default Navigations;

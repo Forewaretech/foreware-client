@@ -46,9 +46,7 @@ const BlogPostsGrid = ({ intitialData }: Readonly<Props>) => {
             />
           ))}
         </section>
-        <SectionSpacing />
       </section>
-      <DigitalTransformers />
     </section>
   );
 };

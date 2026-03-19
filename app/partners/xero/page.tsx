@@ -61,26 +61,28 @@ const XeroPage = () => {
         />
       </section>
       <SectionSpacing />
-      <section className=" bg-[#F2F2F2] py-20 container">
-        <TileContent
-          direction="ltr"
-          imageClassName="lg:max-h-[200px]"
-          content={
-            <div className=" text-base">
-              <Heading variant="h4">Who Xero Is Best Suited For: </Heading>
-              <BaseSpacing />
-              <ListDisc
-                items={[
-                  "Small and growing businesses",
-                  "Finance and accounting teams",
-                  "Organizations seeking cloud-based accounting",
-                  "Companies looking for a reliable Xero partner in Nigeria",
-                ]}
-              />
-            </div>
-          }
-          image={xero_suited_for}
-        />
+      <section className=" bg-[#F2F2F2] py-20 ">
+        <section className="container">
+          <TileContent
+            direction="ltr"
+            imageClassName="lg:max-h-[200px]"
+            content={
+              <div className=" text-base">
+                <Heading variant="h4">Who Xero Is Best Suited For: </Heading>
+                <BaseSpacing />
+                <ListDisc
+                  items={[
+                    "Small and growing businesses",
+                    "Finance and accounting teams",
+                    "Organizations seeking cloud-based accounting",
+                    "Companies looking for a reliable Xero partner in Nigeria",
+                  ]}
+                />
+              </div>
+            }
+            image={xero_suited_for}
+          />
+        </section>
       </section>
       <section className="container">
         <SectionSpacing />

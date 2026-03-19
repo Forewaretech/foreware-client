@@ -35,7 +35,7 @@ const ZohoPage = () => {
         <SectionSpacing />
         <TileContent
           direction="ltr"
-          imageClassName=" lg:max-h-[300px] xl:max-w-[500px]"
+          imageClassName="lg:max-h-[300px] xl:max-w-[500px]"
           image={zoho_overview}
           content={
             <div>
@@ -63,25 +63,27 @@ const ZohoPage = () => {
         />
       </section>
       <SectionSpacing />
-      <section className=" bg-[#F2F2F2] py-20 container">
-        <TileContent
-          imageClassName="lg:max-h-[200px]"
-          content={
-            <div className=" text-base">
-              <Heading variant="h4">Who Zoho Is Best Suited For: </Heading>
-              <BaseSpacing />
-              <ListDisc
-                items={[
-                  "Growing businesses and mid-sized organizations",
-                  "Sales-driven teams",
-                  "Companies looking to improve CRM and customer management",
-                  "Organizations seeking a reliable Zoho partner in Nigeria",
-                ]}
-              />
-            </div>
-          }
-          image={zoho_suited_for}
-        />
+      <section className=" bg-[#F2F2F2] py-20 ">
+        <section className="container">
+          <TileContent
+            imageClassName="lg:max-h-[200px]"
+            content={
+              <div className=" text-base">
+                <Heading variant="h4">Who Zoho Is Best Suited For: </Heading>
+                <BaseSpacing />
+                <ListDisc
+                  items={[
+                    "Growing businesses and mid-sized organizations",
+                    "Sales-driven teams",
+                    "Companies looking to improve CRM and customer management",
+                    "Organizations seeking a reliable Zoho partner in Nigeria",
+                  ]}
+                />
+              </div>
+            }
+            image={zoho_suited_for}
+          />
+        </section>
       </section>
       <section className="container">
         <SectionSpacing />

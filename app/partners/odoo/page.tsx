@@ -63,7 +63,12 @@ const PartnersPage = () => {
           }
         />
         <SectionSpacing />
+      </section>
+
+      <section>
         <SuitedFor />
+      </section>
+      <section className="container">
         <SectionSpacing />
         <HeaderContent
           href="/contact"

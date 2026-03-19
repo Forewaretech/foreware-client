@@ -65,31 +65,34 @@ const RiskCognizancePage = () => {
         />
       </section>
       <SectionSpacing />
-      <section className=" bg-[#F2F2F2] py-20 container">
-        <TileContent
-          imageClassName="-"
-          heading="Why Work with Foreware as Your Risk Cognizance Partner"
-          content={
-            <div className=" text-base">
-              <p>
-                As a Risk Cognizance partner, our focus is on practical adoption
-                and long-term use. We work closely with teams to ensure the
-                platform supports real governance and compliance workflows.
-              </p>
-              <Heading variant="h4">What our partnership offers: </Heading>
-              <BaseSpacing />
-              <ListDisc
-                items={[
-                  "Clear and structured GRC processes",
-                  "Improved visibility into risk and compliance",
-                  "Better audit and reporting readiness",
-                  "Local support from a trusted Risk Cognizance partner in Nigeria",
-                ]}
-              />
-            </div>
-          }
-          image={risk_cognizance_suited_for}
-        />
+      <section className=" bg-[#F2F2F2] py-20 ">
+        <section className="container">
+          <TileContent
+            imageClassName="-"
+            heading="Why Work with Foreware as Your Risk Cognizance Partner"
+            content={
+              <div className=" text-base">
+                <p>
+                  As a Risk Cognizance partner, our focus is on practical
+                  adoption and long-term use. We work closely with teams to
+                  ensure the platform supports real governance and compliance
+                  workflows.
+                </p>
+                <Heading variant="h4">What our partnership offers: </Heading>
+                <BaseSpacing />
+                <ListDisc
+                  items={[
+                    "Clear and structured GRC processes",
+                    "Improved visibility into risk and compliance",
+                    "Better audit and reporting readiness",
+                    "Local support from a trusted Risk Cognizance partner in Nigeria",
+                  ]}
+                />
+              </div>
+            }
+            image={risk_cognizance_suited_for}
+          />
+        </section>
       </section>
       <section className="container">
         <SectionSpacing />

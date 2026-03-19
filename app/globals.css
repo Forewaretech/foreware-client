@@ -103,12 +103,9 @@ scroll-snap-align: start
 
 .search-field::-webkit-search-cancel-button { display: none; }
 
-body::-webkit-scrollbar { width: 8px; height: 8px; }
+body::-webkit-scrollbar { width: 4px; height: 4px; }
 
-body::-webkit-scrollbar-track {
-    background: var(--primary);
-    border-left: 1px solid var(--cultured);
-}
+
 
 body::-webkit-scrollbar-thumb {
     background: var(--primary);
