@@ -1,6 +1,6 @@
 import PageBanner from "../components/Banners/PageBanner";
 
-import ent_business_sol from "@/public/images/banners/ent_business_sol.png";
+import ent_business_sol from "@/public/images/banners/ent_business_sol.webp";
 import SectionSpacing from "../components/Spacing/SectionSpacing";
 import TileContent from "../components/Headers/TileContent";
 import EntBizSols from "./EntBizSols";

@@ -119,11 +119,11 @@ const Testimonials = () => {
 
   return (
     <section
-      className="bg-muted  pb-10
+      className="bg-muted pb-10
     lg:pt-20"
     >
       {/* Main content area */}
-      <div className="flex items-center gap-4 justify-center flex-wrap min-w-full px-4 md:px-12">
+      <div className="flex items-center gap-4 justify-center flex-wrap min-w-full px-4">
         {/* Left avatars */}
         <div className="hidden md:flex items-center gap-4">
           {leftAvatarIndices.map((idx) => (
@@ -165,7 +165,7 @@ const Testimonials = () => {
       </div>
 
       {/* Mobile avatars row */}
-      <div className="flex md:hidden justify-center gap-3 mt-6 flex-wrap px-4">
+      <div className="flex md:hidden justify-center gap-3 mt-6 flex-wrap">
         {testimonials.map((testimonial, index) => (
           <CustomerAvatar
             key={testimonial.customerName}

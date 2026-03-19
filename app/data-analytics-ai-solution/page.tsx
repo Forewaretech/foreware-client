@@ -1,6 +1,6 @@
 import PageBanner from "../components/Banners/PageBanner";
 
-import data_analytics_ai from "@/public/images/banners/data_analytics_ai.png";
+import data_analytics_ai from "@/public/images/banners/data_analytics_ai.webp";
 import TileContent from "../components/Headers/TileContent";
 import SectionSpacing from "../components/Spacing/SectionSpacing";
 

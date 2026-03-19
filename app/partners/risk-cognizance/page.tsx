@@ -6,12 +6,16 @@ import ListDisc from "@/app/components/List/ListDisc";
 import BaseSpacing from "@/app/components/Spacing/BaseSpacing";
 import SectionSpacing from "@/app/components/Spacing/SectionSpacing";
 
+import risk_cognizance_banner from "@/public/images/banners/risk_cognizance_banner.webp";
+import risk_cognizance_overview from "@/public/images/partners/risk_cognizance_overview.webp";
+import risk_cognizance_suited_for from "@/public/images/partners/risk_cognizance_suited_for.webp";
+
 const RiskCognizancePage = () => {
   return (
     <main>
       <PageBanner
         bannerImage={{
-          image: zoho_banner,
+          image: risk_cognizance_banner,
           alt: "risk cognozance banner",
         }}
         heading={"Foreware - Risk Cognizance Partner in Nigeria"}
@@ -31,8 +35,8 @@ const RiskCognizancePage = () => {
         <SectionSpacing />
         <TileContent
           direction="ltr"
-          imageClassName=" lg:max-h-[300px] xl:max-w-[500px]"
-          image={zoho_overview}
+          imageClassName="lg:max-h-[300px] xl:max-w-[500px]"
+          image={risk_cognizance_overview}
           content={
             <div>
               <p>
@@ -44,7 +48,7 @@ const RiskCognizancePage = () => {
               </p>
               <BaseSpacing />
               <Heading variant="h4">
-                Our Risk Cognizance partnership supports:{" "}
+                Our Risk Cognizance partnership supports:
               </Heading>
               <BaseSpacing />
               <ListDisc
@@ -63,7 +67,7 @@ const RiskCognizancePage = () => {
       <SectionSpacing />
       <section className=" bg-[#F2F2F2] py-20 container">
         <TileContent
-          imageClassName="lg:max-h-[200px]"
+          imageClassName="-"
           heading="Why Work with Foreware as Your Risk Cognizance Partner"
           content={
             <div className=" text-base">
@@ -84,7 +88,7 @@ const RiskCognizancePage = () => {
               />
             </div>
           }
-          image={zoho_suited_for}
+          image={risk_cognizance_suited_for}
         />
       </section>
       <section className="container">

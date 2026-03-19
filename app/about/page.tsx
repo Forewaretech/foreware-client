@@ -1,5 +1,5 @@
 import PageBanner from "../components/Banners/PageBanner";
-import aboutBanner from "@/public/images/banners/about_banner.png";
+import aboutBanner from "@/public/images/banners/about_banner.webp";
 import DigitalTransformers from "../components/Transformers/DigitalTransformers";
 import SectionSpacing from "../components/Spacing/SectionSpacing";
 import HeaderContent from "../components/Headers/HeaderContent";

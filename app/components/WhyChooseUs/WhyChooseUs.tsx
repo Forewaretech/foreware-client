@@ -21,7 +21,7 @@ const WhyChooseUs = () => {
         lg:pt-20"
       >
         <div
-          className="container flex flex-col gap-4 py-6
+          className="container flex flex-col gap-4 py-6 right-0 left-0
         lg:absolute lg:top-20 lg:flex-row lg:py-0"
         >
           <div className=" lg:h-147 lg:w-63.75">

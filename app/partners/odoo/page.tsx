@@ -1,6 +1,6 @@
 import PageBanner from "../../components/Banners/PageBanner";
 
-import odoo_banner from "@/public/images/banners/odoo_banner.png";
+import odoo_banner from "@/public/images/banners/odoo_banner.webp";
 import SectionSpacing from "../../components/Spacing/SectionSpacing";
 import HeaderContent from "../../components/Headers/HeaderContent";
 import TileContent from "../../components/Headers/TileContent";

@@ -3,8 +3,8 @@ import Testimonials from "../testimonials/Testimonials";
 
 const TestimonialsPreview = () => {
   return (
-    <section id="success-stories" className="container py-20 bg-[#F2F2F2]">
-      <header>
+    <section id="success-stories" className="py-20 bg-[#F2F2F2]">
+      <header className="container">
         <HeaderContent
           heading="Proven Results Across Industries."
           highlightText="Our Success Stories"

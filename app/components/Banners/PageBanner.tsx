@@ -24,7 +24,7 @@ const PageBanner = ({
   href,
 }: Readonly<Props>) => {
   return (
-    <div className=" h-167.25 relative">
+    <div className=" h-167.25 relative mx-auto">
       <Image
         src={bannerImage.image}
         alt={bannerImage.alt}
@@ -33,7 +33,7 @@ const PageBanner = ({
         className="w-full h-full object-cover"
       />
 
-      <section className="container absolute top-10">
+      <section className="container absolute top-10 left-0 right-0">
         <BannerNav />
 
         <div className=" py-20">
