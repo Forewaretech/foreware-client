@@ -71,7 +71,7 @@ export default async function RootLayout({
         className={`${lexendSans.variable} antialiased`}
         suppressHydrationWarning
       >
-        <TopHeader />
+        {/* <TopHeader /> */}
 
         <QueryProvider>
           <>{children}</>

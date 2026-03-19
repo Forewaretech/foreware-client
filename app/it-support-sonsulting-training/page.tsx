@@ -1,6 +1,6 @@
 import PageBanner from "../components/Banners/PageBanner";
 
-import it_support from "@/public/images/banners/it_support.png";
+import it_support from "@/public/images/banners/it_support.webp";
 import SectionSpacing from "../components/Spacing/SectionSpacing";
 import TileContent from "../components/Headers/TileContent";
 

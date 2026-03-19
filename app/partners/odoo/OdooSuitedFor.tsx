@@ -1,13 +1,13 @@
-import Heading from "../components/Headers/Headings";
+import Heading from "../../components/Headers/Headings";
 import Image from "next/image";
 
-import IconHolder from "../components/ui/icon_holder";
+import IconHolder from "../../components/ui/icon_holder";
 
 import branches_grow from "@/public/icons/branches_grow.svg";
 import people from "@/public/icons/people.svg";
 import calc from "@/public/icons/calc.svg";
 import odoo_suited_for_rrotate from "@/public/images/partners/odoo_suited_for_rrotate.svg";
-import BaseSpacing from "../components/Spacing/BaseSpacing";
+import BaseSpacing from "../../components/Spacing/BaseSpacing";
 
 const suits = [
   {
@@ -24,7 +24,7 @@ const suits = [
   },
 ];
 
-const SuitedFor = () => {
+const OdooSuitedFor = () => {
   return (
     <section
       className="bg-[#F3F4F6] grid 
@@ -56,4 +56,4 @@ const SuitedFor = () => {
   );
 };
 
-export default SuitedFor;
+export default OdooSuitedFor;

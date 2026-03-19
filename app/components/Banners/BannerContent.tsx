@@ -20,7 +20,7 @@ const BannerContent = ({
       className=" bg-black/80 p-10 rounded-lg text-white
       lg:w-120"
     >
-      <Heading variant="h2">{heading}</Heading>
+      <Heading variant="h1">{heading}</Heading>
       <p className="text-xl py-4">{text}</p>
       {buttonText && (
         <Link href={href || "/contact"}>

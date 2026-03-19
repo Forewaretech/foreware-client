@@ -1,4 +1,4 @@
-import homeBanner1 from "@/public/images/banners/home_banner_1.png";
+import homeBanner1 from "@/public/images/banners/home_banner_1.webp";
 import PageBanner from "./PageBanner";
 
 const HomeBanner = () => {

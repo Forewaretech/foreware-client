@@ -5,7 +5,7 @@ const zillaSlab = Zilla_Slab({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-type HeadingVariant = "h2" | "h4";
+type HeadingVariant = "h1" | "h2" | "h4";
 
 interface Props {
   variant: HeadingVariant;
@@ -19,6 +19,12 @@ const Heading = ({
   const baseClassNames = `${zillaSlab.className} ${textColor == "white" ? "text-white" : ""} font-bold`;
 
   switch (variant) {
+    case "h1":
+      return (
+        <h2 className={`${baseClassNames} text-[32px] leading-10`}>
+          {children}
+        </h2>
+      );
     case "h2":
       return (
         <h2 className={`${baseClassNames} text-[32px] leading-10`}>
