@@ -18,8 +18,6 @@ interface Props {
 const BlogPostDetailClient = ({ postId, initialData }: Readonly<Props>) => {
   const { data: postDetail, isLoading } = usePost({ id: postId, initialData });
 
-  console.log("postDetail: ", postDetail);
-
   if (!postDetail) return <p>Not Found</p>;
 
   if (postDetail)
@@ -33,7 +31,7 @@ const BlogPostDetailClient = ({ postId, initialData }: Readonly<Props>) => {
           heading={postDetail?.title}
           text={postDetail?.summary}
         />
-        <div className=" h-11 bg-gray-200 container flex items-center gap-12">
+        <div className="h-11 bg-gray-200 container flex items-center gap-12">
           <p className="flex items-center gap-2">
             <Timer size={18} />
             <span>
@@ -44,11 +42,11 @@ const BlogPostDetailClient = ({ postId, initialData }: Readonly<Props>) => {
           </p>
           <p className="flex items-center gap-2">
             <User2 size={18} />
-            <span>Foreware Team</span>
+            <span>{postDetail?.author ?? "Foreware Team"}</span>
           </p>
         </div>
         <SectionSpacing />
-        <section className="container ">
+        <section className="container">
           <p className="border-l-4 border-primary pl-4">{postDetail.summary}</p>
           <ContentSpacing />
           <div

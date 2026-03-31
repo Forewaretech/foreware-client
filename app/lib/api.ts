@@ -13,6 +13,7 @@ export const getPublishedPosts = async (): Promise<PostType[]> => {
     if (!res.ok) return [];
 
     const json = await res.json();
+
     return json.data || []; // Safely access .data
   } catch (error) {
     console.error("Failed to load posts: ", error);

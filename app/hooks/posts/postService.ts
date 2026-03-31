@@ -20,6 +20,7 @@ export type PostType = {
   seoDescription?: string;
   user?: { name: string };
   createdAt?: string;
+  author?: string;
 };
 
 const postService = createResourceApi<PostType>("posts");

@@ -8,6 +8,7 @@ import { Newspaper } from "lucide-react"; // Or any icon you prefer
 
 const BlogPage = async () => {
   const intitialData = await getPublishedPosts();
+  console.log("intitialData: ", intitialData);
   const isEmpty = intitialData.length === 0;
 
   return (
