@@ -3,7 +3,7 @@
 import PageBanner from "@/app/components/Banners/PageBanner";
 import SectionSpacing from "@/app/components/Spacing/SectionSpacing";
 import DigitalTransformers from "@/app/components/Transformers/DigitalTransformers";
-import downloads_banner from "@/public/images/banners/downloads_banner.png";
+import downloads_banner from "@/public/images/banners/downloads_banner.webp";
 import { Download, FileText } from "lucide-react";
 
 const downloadItems = [

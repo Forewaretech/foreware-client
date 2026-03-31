@@ -4,7 +4,7 @@ import React from "react";
 import PageBanner from "../components/Banners/PageBanner";
 import Button from "../components/Buttons/Button";
 import { ArrowRight, Code, Shield, Users, Zap } from "lucide-react";
-import career_banner from "@/public/images/banners/career_banner.jpg"; // Update your path
+import career_banner from "@/public/images/banners/career_banner.webp";
 import Link from "next/link";
 
 const values = [

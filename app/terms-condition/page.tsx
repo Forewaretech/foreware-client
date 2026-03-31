@@ -1,6 +1,6 @@
 "use client";
 
-import terms_banner from "@/public/images/banners/terms_banner.png";
+import terms_banner from "@/public/images/banners/terms_banner.webp";
 import PageBanner from "../components/Banners/PageBanner";
 
 const TermsPage = () => {

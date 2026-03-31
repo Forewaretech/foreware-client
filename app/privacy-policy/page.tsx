@@ -1,6 +1,6 @@
 "use client";
 
-import privacy_banner from "@/public/images/banners/terms_banner.png";
+import privacy_banner from "@/public/images/banners/privacy_banner.webp";
 import PageBanner from "../components/Banners/PageBanner";
 
 const PrivacyPage = () => {
