@@ -6,14 +6,59 @@ import "./globals.css";
 import QueryProvider from "./providers/QueryProvider";
 import PopUpFormClient from "./components/Form/PopUpFormClient";
 
+// Define the Schema object outside the component
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Foreware Technologies",
+  alternateName: "Foreware Technologies",
+  url: "https://www.forewaretechnologies.com/",
+  logo: "https://www.forewaretechnologies.com/logo.png",
+  image: "https://www.forewaretechnologies.com/og-image.jpg", // Recommended for LocalBusiness
+  description:
+    "Foreware Technologies is a leading technology solutions provider in Nigeria, delivering custom software, AI solutions, and IT consulting.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2 Nurudeen Street, Anifowoshe",
+    addressLocality: "Ikeja",
+    postalCode: "100282",
+    addressRegion: "Lagos",
+    addressCountry: "NG",
+  },
+  telephone: "+2348164699021",
+  email: "info@forewaretechnologies.com",
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "09:00",
+      closes: "17:00",
+    },
+  ],
+  sameAs: [
+    "https://www.forewaretechnologies.com/about",
+    "https://www.forewaretechnologies.com/contact",
+  ],
+};
+
 const lexendSans = Lexend({
   variable: "--font-lexand-sans",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Foreware",
-  description: "Technology That Moves Business Forward.",
+  title:
+    "Foreware Technologies: Leading Technology Solutions Provider in Nigeria",
+  description:
+    "Foreware Technologies is a leading technology solutions provider in Nigeria delivering custom software, AI, and IT support.",
 };
 
 export default async function RootLayout({
@@ -51,6 +96,12 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Injecting Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+
         {/* Standard HTML <head> tag. 
           We render the raw snippets directly here.
         */}

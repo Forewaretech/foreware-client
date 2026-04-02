@@ -1,11 +1,10 @@
 "use client";
 
-import React from "react";
+import career_banner from "@/public/images/banners/career_banner.webp";
+import { Shield, Users, Zap } from "lucide-react";
+import Link from "next/link";
 import PageBanner from "../components/Banners/PageBanner";
 import Button from "../components/Buttons/Button";
-import { ArrowRight, Code, Shield, Users, Zap } from "lucide-react";
-import career_banner from "@/public/images/banners/career_banner.webp";
-import Link from "next/link";
 
 const values = [
   {
