@@ -25,17 +25,17 @@ const services = [
     href: "custom-software-solution",
   },
   {
-    service: "Data Analytics & AI Solutions",
+    service: "AI & Data Intelligence",
     icon: data_analytics_ai,
     href: "data-analytics-ai-solution",
   },
   {
-    service: "System Integration & API Dev.",
+    service: "Systems & API Integration",
     icon: sys_int_api,
     href: "system-integration-api-dev",
   },
   {
-    service: "IT Support, Consulting & Training",
+    service: "IT Support & Consulting",
     icon: it_sup_consulting_training,
     href: "it-support-sonsulting-training",
   },
@@ -67,7 +67,7 @@ const OurServices = () => {
       lg:flex-row"
       >
         <div className="min-w-1/2">
-          <HeaderContent heading="Enterprise Systems That Scale.">
+          <HeaderContent heading="Enterprise Software Solutions for Businesses of All Sizes.">
             Modern enterprise solutions that unify operations, increase
             visibility, and drive efficiency across every function.
           </HeaderContent>

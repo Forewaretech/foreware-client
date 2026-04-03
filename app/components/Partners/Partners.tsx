@@ -11,12 +11,12 @@ const Partners = () => {
       >
         <div>
           <HighlightButton>Our Partners</HighlightButton>
-          <HeaderContent heading="Building Africa's Future Through Partnership.">
-            We partner with leading technology providers to deliver
-            enterprise-grade solutions across Nigeria and Africa. These
-            strategic alliances ensure you get proven platforms, local
-            expertise, and the support infrastructure needed to scale with
-            confidence.
+          <HeaderContent heading="Building Africa's Technology Future Through Partnership.">
+            We work with some of the world's leading technology providers to
+            bring proven, reliable IT solutions to businesses across Nigeria and
+            Africa. Our partnerships mean you get access to world-class
+            technologies, backed by a local team that understands the market and
+            your business.
           </HeaderContent>
         </div>
         <div

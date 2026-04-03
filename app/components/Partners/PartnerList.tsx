@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import odoo from "@/public/images/partners/odoo.png";
-import riskcognuzaace from "@/public/images/partners/riskcognuzaace.png";
+import vanta from "@/public/images/partners/vanta.jpeg";
 import webhr from "@/public/images/partners/webhr.png";
 import wondersolft from "@/public/images/partners/wondersolft.png";
 import xero from "@/public/images/partners/xero.png";
@@ -25,8 +25,8 @@ const partners = [
     alt: "Odoo",
   },
   {
-    src: riskcognuzaace,
-    alt: "Riskcognuzaace",
+    src: vanta,
+    alt: "Vanta",
   },
   {
     src: zoho,

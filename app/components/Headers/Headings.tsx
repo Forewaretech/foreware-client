@@ -16,7 +16,8 @@ const Heading = ({
   children,
   textColor = "dark",
 }: Readonly<PropsWithChildren<Props>>) => {
-  const baseClassNames = `${zillaSlab.className} ${textColor == "white" ? "text-white" : ""} font-bold`;
+  // const baseClassNames = `${zillaSlab.className} ${textColor == "white" ? "text-white" : ""} font-bold`;
+  const baseClassNames = ` ${textColor == "white" ? "text-white" : ""} font-bold`;
 
   switch (variant) {
     case "h1":

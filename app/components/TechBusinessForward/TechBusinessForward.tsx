@@ -11,9 +11,8 @@ const TechBusinessForward = () => {
           highlightText="Our Focus"
           heading="Technology That Moves Business Forward."
         >
-          We deliver enterprise solutions designed for scale. Custom software,
-          intelligent data systems, and seamless integrations that turn
-          operational complexity into competitive advantage
+          Every business is different. We take the time to understand yours,
+          then deliver technology that fits and grows with you.
         </HeaderContent>
         <SectionSpacing />
         <OurServices />

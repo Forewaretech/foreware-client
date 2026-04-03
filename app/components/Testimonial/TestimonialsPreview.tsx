@@ -10,10 +10,10 @@ const TestimonialsPreview = () => {
           highlightText="Our Success Stories"
           center
         >
-          From startups to established enterprises across Nigeria and Africa,
-          we've delivered solutions that drive measurable impact. See how we've
-          helped businesses scale operations, unlock growth, and stay
-          competitive.
+          Our team brings deep expertise across multiple industries, which means
+          whatever sector your business operates in, we understand the
+          challenges you face. See what our clients are saying about working
+          with us.
         </HeaderContent>
       </header>
 

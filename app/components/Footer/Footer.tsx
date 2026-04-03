@@ -1,17 +1,13 @@
-import { Mail, MapPin, Phone } from "lucide-react";
-import Button from "../Buttons/Button";
 import FooterBottom from "./FooterBottom";
+import FooterContactUs from "./FooterContactUs";
 import FooterInsights from "./FooterInsights";
 import FooterQuickLinks from "./FooterQuickLinks";
 import FooterS from "./FooterS";
 import FooterSolutions from "./FooterSolutions";
-import Socials from "./Socials";
-import BaseSpacing from "../Spacing/BaseSpacing";
-import FooterContactUs from "./FooterContactUs";
 
 const Footer = () => {
   return (
-    <footer className=" ">
+    <footer>
       <div className=" bg-dark-1">
         <div className="container">
           <div
@@ -20,7 +16,9 @@ const Footer = () => {
           >
             <FooterSolutions />
             <FooterS />
-            <FooterQuickLinks />
+            <div className="my-6 lg:my-0">
+              <FooterQuickLinks />
+            </div>
             <FooterInsights />
           </div>
         </div>

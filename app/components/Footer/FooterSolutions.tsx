@@ -4,23 +4,23 @@ import QuickLink from "./QuickLink";
 
 export const services = [
   {
-    text: "Enterprise & Business",
+    text: "Enterprise & Business Solutions",
     href: "enterprise-business-solution",
   },
   {
-    text: "Software Development",
+    text: " Custom Software Development.",
     href: "/custom-software-solution",
   },
   {
-    text: " Data Analytics & AI",
+    text: "AI & Data Intelligence",
     href: "/data-analytics-ai-solution",
   },
   {
-    text: "System Integration & API Dev",
+    text: "Systems & API Integration",
     href: "/system-integration-api-dev",
   },
   {
-    text: "IT Support, Consulting & Training",
+    text: "IT Support & Consulting",
     href: "/it-support-sonsulting-training",
   },
 ];

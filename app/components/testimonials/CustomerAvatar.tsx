@@ -8,6 +8,7 @@ interface CustomerAvatarProps {
   onClick: () => void;
   size: "small" | "large";
   floatDelay?: number;
+  initials?: string;
 }
 
 export const CustomerAvatar = ({
@@ -16,12 +17,14 @@ export const CustomerAvatar = ({
   isActive,
   onClick,
   size,
+  initials,
   floatDelay = 0,
 }: CustomerAvatarProps) => {
   const containerSize =
     size === "small" ? "w-[60px] h-[60px]" : "w-[110px] h-[110px]";
   const imageSize = size === "small" ? "w-11 h-11" : "w-[94px] h-[94px]";
 
+  console.log("initials : ", initials);
   return (
     <motion.button
       onClick={onClick}

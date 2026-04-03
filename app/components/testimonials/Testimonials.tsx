@@ -11,6 +11,8 @@ import customer2 from "@/public/images/customers/customer_2.png";
 import customer3 from "@/public/images/customers/customer_3.jpg";
 import customer4 from "@/public/images/customers/customer_4.jpg";
 import customer5 from "@/public/images/customers/customer_5.jpg";
+import maleAvatar from "@/public/images/male-avatar.jpg";
+
 import { StaticImageData } from "next/image";
 
 interface TestimonialData {
@@ -19,23 +21,26 @@ interface TestimonialData {
   customerTitle: string;
   customerImage: StaticImageData | string;
   avatarSize: "small" | "large";
+  initials?: string;
 }
 
 const testimonials: TestimonialData[] = [
   {
     quote:
-      "The partnership with Wragby has been rewarding. We were able to get customer insights across our business in real-time, the Wragby team were very supportive in guiding us all the way, they are indeed a trusted technology partner.",
-    customerName: "Chukwuemeka Ikoro",
-    customerTitle: "Head, Data and Digital Services, Betking",
-    customerImage: customer1,
+      "Managing multiple projects used to be a constant challenge for us. Foreware stepped in by providing system support and integrating our enterprise solution with a cloud-based HR system. Now our team has reliable access to the information they need, and having a dependable partner has made a real difference in how we operate.",
+    customerName: "Olamide E.",
+    initials: "O. E.",
+    customerTitle: "Application Support Manager, UPDC Plc",
+    customerImage: maleAvatar,
     avatarSize: "small",
   },
   {
     quote:
-      "Working with this team has transformed our business operations. Their innovative solutions and dedicated support have exceeded our expectations at every turn.",
-    customerName: "Sarah Johnson",
-    customerTitle: "CEO, TechCorp Solutions",
-    customerImage: customer2,
+      "Foreware supported us in extracting data from a cloud-based system, which we then imported into our data warehouse. They guided the process and helped us structure the data in the right format, enabling seamless synchronization on our end. This made it easier for our team to generate key reports and improved our operations.",
+    customerName: "Adebowale E.",
+    customerTitle: "Data Analyst, Custodian & Allied Insurance Ltd",
+    customerImage: maleAvatar,
+    initials: "A. E.",
     avatarSize: "large",
   },
   {
@@ -43,7 +48,7 @@ const testimonials: TestimonialData[] = [
       "The level of professionalism and expertise demonstrated throughout our collaboration has been outstanding. They truly understand our industry needs.",
     customerName: "Michael Chen",
     customerTitle: "CTO, Innovation Labs",
-    customerImage: customer3,
+    customerImage: maleAvatar,
     avatarSize: "large",
   },
   {
@@ -51,7 +56,7 @@ const testimonials: TestimonialData[] = [
       "Their approach to problem-solving is refreshingly innovative. The results speak for themselves - our efficiency improved by 40% within the first quarter.",
     customerName: "Amanda Williams",
     customerTitle: "VP Operations, GlobalTech Inc",
-    customerImage: customer4,
+    customerImage: maleAvatar,
     avatarSize: "large",
   },
   {
@@ -59,7 +64,7 @@ const testimonials: TestimonialData[] = [
       "Exceptional service and cutting-edge solutions. They've become an invaluable extension of our team, delivering consistent value month after month.",
     customerName: "Omar Hassan",
     customerTitle: "CEO, BigThings Labs",
-    customerImage: customer5,
+    customerImage: maleAvatar,
     avatarSize: "small",
   },
 ];
@@ -131,6 +136,7 @@ const Testimonials = () => {
               key={testimonials[idx].customerName}
               src={testimonials[idx].customerImage}
               alt={`${testimonials[idx].customerName} profile`}
+              initials={testimonials[idx].initials}
               isActive={currentIndex === idx}
               onClick={() => handleAvatarClick(idx)}
               size={testimonials[idx].avatarSize}
@@ -156,6 +162,7 @@ const Testimonials = () => {
               key={testimonials[idx].customerName}
               src={testimonials[idx].customerImage}
               alt={`${testimonials[idx].customerName} profile`}
+              initials={testimonials[idx].initials}
               isActive={currentIndex === idx}
               onClick={() => handleAvatarClick(idx)}
               size={testimonials[idx].avatarSize}

@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
           className="container flex flex-col gap-4 py-6 right-0 left-0
         lg:absolute lg:top-20 lg:flex-row lg:py-0"
         >
-          <div className=" lg:h-147 lg:w-63.75">
+          <div className="order-1 lg-order-0 lg:h-147 lg:w-63.75">
             <div className="my-4">
               <ServiceCard
                 image={bars_3}
@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
               </div>
             </GradientBorder>
           </div>
-          <div>
+          <div className=" order-0 lg:order-1">
             <div
               className="py-10 xl:h-96
             lg:p-10"

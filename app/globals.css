@@ -9,6 +9,7 @@
   --dark-1: #191919;
   --dark-2: #131313;
   --foreware-3: #000D30
+
 }
 
 .container {
@@ -28,11 +29,12 @@
   }
 }
 
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-lexend-sans);
-  --font-mono: var(--font-lexend-mono);
+  --font-sans: var(--font-inter-sans);
+  --font-mono: var(--font-inter-mono);
 
   --color-bg-2: var(--bg-2);
   --color-foreware-3: var(--foreware-3);
@@ -47,12 +49,16 @@
   :root {
     /* --background: #0a0a0a;
     --foreground: #ededed; */
+
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+    /* font-family: "Inter", "Inter Fallback"; */
+    font-family: var(--font-sans);
+
 }
 
 

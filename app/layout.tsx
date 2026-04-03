@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lexend } from "next/font/google";
+import { Inter } from "next/font/google";
 import TopHeader from "./components/Headers/TopHeader";
 import Footer from "./components/Footer/Footer";
 import "./globals.css";
@@ -49,8 +49,8 @@ const schemaData = {
   ],
 };
 
-const lexendSans = Lexend({
-  variable: "--font-lexand-sans",
+const interSans = Inter({
+  variable: "--font-inter-sans",
   subsets: ["latin"],
 });
 
@@ -94,7 +94,11 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${interSans.variable} antialiased`}
+    >
       <head>
         {/* Injecting Structured Data */}
         <script
@@ -118,10 +122,7 @@ export default async function RootLayout({
           />
         ))}
       </head>
-      <body
-        className={`${lexendSans.variable} antialiased`}
-        suppressHydrationWarning
-      >
+      <body suppressHydrationWarning>
         {/* <TopHeader /> */}
 
         <QueryProvider>
