@@ -72,7 +72,9 @@ const OurServices = () => {
             visibility, and drive efficiency across every function.
           </HeaderContent>
           <BaseSpacing />
-          <Button>Talk to an Expert</Button>
+          <Link href="/contact">
+            <Button>Talk to an Expert</Button>
+          </Link>
         </div>
 
         <div className="min-w-1/2">
