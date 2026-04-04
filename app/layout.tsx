@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import TopHeader from "./components/Headers/TopHeader";
 import Footer from "./components/Footer/Footer";
 import "./globals.css";
@@ -49,8 +49,8 @@ const schemaData = {
   ],
 };
 
-const interSans = Inter({
-  weight: ["400"],
+const interSans = Roboto({
+  weight: ["400", "500", "600", "600"],
   variable: "--font-inter-sans",
   subsets: ["latin"],
 });
