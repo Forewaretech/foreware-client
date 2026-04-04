@@ -3,13 +3,11 @@ import Button from "../Buttons/Button";
 import Socials from "./Socials";
 import Link from "next/link";
 import { ADDRESS, EMAIL, PHONE } from "@/app/lib/constants";
+import Logo from "../Generics/Logo";
 
 const FooterContactUs = () => {
   return (
     <div className=" border-t-[0.2px] container py-20">
-      <Link href="/contact">
-        <Button>Contact Us</Button>
-      </Link>
       <div
         className="flex mt-5 flex-col gap-6
         lg:flex-row"
@@ -18,6 +16,9 @@ const FooterContactUs = () => {
           className=" flex flex-col gap-6
         lg:w-1/2"
         >
+          <Link href="/contact">
+            <Button>Contact Us</Button>
+          </Link>
           <div className="flex gap-4">
             <Phone className=" text-white min-w-5" />
             <div>
@@ -42,6 +43,7 @@ const FooterContactUs = () => {
           className=" flex flex-col gap-6
         lg:w-1/2"
         >
+          <Logo variant="white" />
           <div className="flex gap-4">
             <MapPin size={20} className=" text-white min-w-5" />
             <div>

@@ -13,6 +13,7 @@ interface Props {
   className?: string;
   buttonText?: string;
   href?: string;
+  removeMaxWidth?: boolean;
 }
 
 const HeaderContent = ({
@@ -24,12 +25,13 @@ const HeaderContent = ({
   className,
   buttonText,
   href,
+  removeMaxWidth,
 }: Readonly<PropsWithChildren<Props>>) => {
   return (
     <header
       className={clsx(
         `${center ? "mx-auto text-center" : ""} 
-        max-w-145`,
+        ${!removeMaxWidth && "max-w-145"}`,
         className,
       )}
     >

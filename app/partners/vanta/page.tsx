@@ -18,9 +18,9 @@ const RiskCognizancePage = () => {
           image: risk_cognizance_banner,
           alt: "risk cognozance banner",
         }}
-        heading={"Foreware - Risk Cognizance Partner in Nigeria"}
+        heading={"Foreware - Vanta GRC Partner in Nigeria"}
         text={
-          "We help organizations use Risk Cognizance to manage governance, risk, and compliance in a structured and consistent way."
+          "Foreware is a trusted Vanta GRC partner in Nigeria, helping businesses implement a governance, risk, and compliance program that is structured, scalable, and built to last."
         }
         buttonText="Request a Consultation"
       />
@@ -29,7 +29,7 @@ const RiskCognizancePage = () => {
         <SectionSpacing />
         <HeaderContent
           highlightText="Overview"
-          heading="Our Risk Cognizance Partnership"
+          heading="Backed by Vanta. Delivered by Foreware."
           center
         />
         <SectionSpacing />
@@ -40,24 +40,22 @@ const RiskCognizancePage = () => {
           content={
             <div>
               <p>
-                Foreware is a Risk Cognizance partner in Nigeria, supporting
-                organizations in adopting and using the platform as part of
-                their GRC framework. Through this partnership, we help
-                businesses align risk and compliance processes with operational
-                realities and regulatory expectations.
+                Vanta is one of the world's leading GRC platforms, trusted by
+                thousands of businesses globally. As an authorised Vanta
+                partner, Foreware brings that power directly to your
+                organisation, with the local expertise to implement it right and
+                the ongoing support to keep it running.
               </p>
               <BaseSpacing />
-              <Heading variant="h4">
-                Our Risk Cognizance partnership supports:
-              </Heading>
+              <Heading variant="h4">Our Vanta partnership supports:</Heading>
               <BaseSpacing />
               <ListDisc
                 items={[
-                  "Risk identification and assessment",
-                  "Compliance management and tracking",
-                  "Policy and control management",
-                  "Audit readiness and reporting",
-                  "Governance and oversight processes",
+                  "A clear, structured approach to managing risk and compliance",
+                  "Automated control monitoring across multiple frameworks",
+                  "Full audit readiness",
+                  "Real-time visibility into your governance program",
+                  "A local team that understands your business and regulatory environment",
                 ]}
               />
             </div>
@@ -69,14 +67,13 @@ const RiskCognizancePage = () => {
         <section className="container">
           <TileContent
             imageClassName="-"
-            heading="Why Work with Foreware as Your Risk Cognizance Partner"
+            heading="Why Work with Foreware as Your Vanta Partner"
             content={
-              <div className=" text-base">
+              <div className="text-base'">
                 <p>
-                  As a Risk Cognizance partner, our focus is on practical
-                  adoption and long-term use. We work closely with teams to
-                  ensure the platform supports real governance and compliance
-                  workflows.
+                  As a Vanta partner, our focus is on practical adoption and
+                  long-term use. We work closely with teams to ensure the
+                  platform supports real governance and compliance workflows.
                 </p>
                 <Heading variant="h4">What our partnership offers: </Heading>
                 <BaseSpacing />
@@ -98,12 +95,12 @@ const RiskCognizancePage = () => {
         <SectionSpacing />
         <HeaderContent
           href="/contact"
-          buttonText="Talk to a Risk Cognizance Partner"
-          heading="Let's Talk About Risk Cognizance"
+          buttonText="Get Started Today"
+          heading="Your Business Deserves a Smarter Way to Manage Risk."
           center
         >
-          If you're looking to strengthen risk and compliance management, we’re
-          ready to discuss how Risk Cognizance can support your organization.
+          Stop managing risk manually. With Vanta and Foreware, you get a
+          smarter, faster, and more reliable way to run your GRC program.
         </HeaderContent>
         <SectionSpacing />
       </section>

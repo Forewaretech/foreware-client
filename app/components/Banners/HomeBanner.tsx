@@ -6,9 +6,8 @@ const HomeBanner = () => {
     <div>
       <PageBanner
         buttonText="Explore our solutions"
-        heading="We Build Systems That Scale."
-        text="We partner with businesses of all sizes to create custom software, 
-        data solutions, and AI systems that grow with your business."
+        heading="Intelligent Technology Solutions Built for Your Business."
+        text=" No matter the size of your business, we make sure technology never holds you back. From system deployments to custom software, AI, and day-to-day IT support, we deliver technology solutions that meet your business needs and drive real value for your investment."
         bannerImage={{ image: homeBanner1, alt: "home banner one" }}
       />
     </div>

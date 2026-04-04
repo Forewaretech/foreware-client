@@ -50,6 +50,7 @@ const schemaData = {
 };
 
 const interSans = Inter({
+  weight: ["400"],
   variable: "--font-inter-sans",
   subsets: ["latin"],
 });

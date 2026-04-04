@@ -32,7 +32,7 @@ const navigations = [
       { text: "WebHR", href: "/partners/webhr" },
       { text: "Xero", href: "/partners/xero" },
       { text: "Wondersoft", href: "/partners/wondersoft" },
-      { text: "Risk Cognizance", href: "/partners/risk-cognizance" },
+      { text: "Vanta", href: "/partners/vanta" },
     ],
   },
   { text: "Career", href: "/careers" },

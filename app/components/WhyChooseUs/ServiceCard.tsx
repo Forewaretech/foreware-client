@@ -5,8 +5,9 @@ interface Props {
   image: StaticImageData | string;
   title: string;
   count: string;
+  removePlus?: boolean;
 }
-const ServiceCard = ({ image, title, count }: Readonly<Props>) => {
+const ServiceCard = ({ image, title, removePlus, count }: Readonly<Props>) => {
   return (
     <GradientBorder>
       <div className="p-5 bg-white rounded-lg ">
@@ -17,7 +18,7 @@ const ServiceCard = ({ image, title, count }: Readonly<Props>) => {
         <div>
           <p className="text-primary text-4xl font-bold">
             <span>{count}</span>
-            <span>+</span>
+            {!removePlus && <span>+</span>}
           </p>
           <p className="text-xl font-light">{title}</p>
         </div>

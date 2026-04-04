@@ -21,7 +21,7 @@ const BannerContent = ({
       lg:w-120"
     >
       <Heading variant="h1">{heading}</Heading>
-      <p className="text-xl py-4">{text}</p>
+      <p className="py-4">{text}</p>
       {buttonText && (
         <Link href={href || "/contact"}>
           <Button>{buttonText}</Button>
