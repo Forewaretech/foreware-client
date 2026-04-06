@@ -25,7 +25,7 @@ const DigitalTransformers = () => {
 
         <div
           className="flex items-center left-0 top-0 bottom-0 
-          text-white px-4 z-40 
+          text-white px-8 z-40 
           lg:px-20 lg:absolute"
         >
           <div className="lg:w-100">
@@ -38,7 +38,17 @@ const DigitalTransformers = () => {
               your challenges, explore what's possible, and map out how
               technology can accelerate your business goals.
             </p>
-            <Link href="/contact">
+            <Image
+              src={digital_transformers}
+              alt="digital transformers"
+              className="h-auto w-125 object-contain
+              lg:hidden"
+            />
+            <Link
+              href="/contact"
+              className="block mx-auto w-fit mt-6
+            lg:mx-0 lg:mt-0"
+            >
               <Button>Get Started Today</Button>
             </Link>
           </div>

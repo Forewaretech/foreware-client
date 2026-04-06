@@ -22,9 +22,9 @@ const Heading = ({
   switch (variant) {
     case "h1":
       return (
-        <h2 className={`${baseClassNames} text-[32px] leading-10`}>
+        <h1 className={`${baseClassNames} text-[32px] leading-10`}>
           {children}
-        </h2>
+        </h1>
       );
     case "h2":
       return (
@@ -33,7 +33,7 @@ const Heading = ({
         </h2>
       );
     case "h4":
-      return <h2 className={`${baseClassNames} text-[20px] `}>{children}</h2>;
+      return <h4 className={`${baseClassNames} text-[20px] `}>{children}</h4>;
 
     default:
       return <h1 className={`${baseClassNames}`}>{children}</h1>;
