@@ -33,9 +33,6 @@ const PageBanner = ({
         // REVERSED: Starts smaller, scales larger
         initial={{ scale: 1, opacity: 0.8 }}
         animate={{ scale: 1.2, opacity: 1 }}
-        // initial={{ scale: 1.2 }}
-        // animate={{ scale: 1 }}
-
         transition={{ duration: 6, ease: "easeOut" }}
         className="absolute inset-0 w-full h-full"
       >

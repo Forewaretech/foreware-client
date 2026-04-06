@@ -60,7 +60,10 @@ const WhyChooseUs = () => {
                 className="text-white font-light min-w-full"
                 removeMaxWidth
               >
-                <ul className=" text-base grid grid-cols-2 gap-x-8 gap-y-4">
+                <ul
+                  className="text-base grid gap-x-8 gap-y-4
+                lg:grid-cols-2"
+                >
                   <li>
                     <span className=" font-bold">
                       1. We Start With Your Problem:

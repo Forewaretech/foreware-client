@@ -18,7 +18,7 @@ const DigitalTransformers = () => {
       >
         <Image
           src={digital_transform_bg}
-          alt="digital transform background"
+          alt="Foreware Technologies - IT consulting and digital transformation Africa"
           className="h-full w-full object-cover
           hidden lg:block"
         />
@@ -62,7 +62,7 @@ const DigitalTransformers = () => {
         >
           <Image
             src={digital_transformers}
-            alt="digital transformers"
+            alt="Foreware Technologies - IT consulting and digital transformation Africa"
             className="h-auto w-125 object-contain"
           />
         </div>
