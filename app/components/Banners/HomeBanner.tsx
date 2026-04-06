@@ -54,12 +54,19 @@ const bannerData = [
 const HomeBanner = () => {
   const [index, setIndex] = useState(0);
 
+  // Use a helper function to change slides
+  const goToSlide = (newIndex: number) => {
+    setIndex(newIndex);
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % bannerData.length);
     }, 6000);
+
+    // This cleanup is crucial when index changes via clicks
     return () => clearInterval(timer);
-  }, []);
+  }, [index]);
 
   const current = bannerData[index];
 
@@ -79,8 +86,9 @@ const HomeBanner = () => {
             text={current.text}
             buttonText={current.buttonText}
             bannerImage={{ image: current.image, alt: "banner" }}
-            sliders={bannerData.map((_, i) => i.toString())}
             currentIndex={index}
+            onDotClick={goToSlide}
+            sliders={bannerData.map((_, i) => i.toString())}
           />
         </motion.div>
       </AnimatePresence>

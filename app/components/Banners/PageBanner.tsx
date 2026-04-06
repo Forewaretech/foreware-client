@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
-import BannerNav from "./BannerNav";
 import BannerContent from "./BannerContent";
 
 interface Props {
@@ -14,6 +13,7 @@ interface Props {
   currentIndex?: number;
   href?: string;
   alt?: string;
+  onDotClick?: (index: number) => void;
 }
 
 const PageBanner = ({
@@ -23,7 +23,7 @@ const PageBanner = ({
   buttonText,
   sliders,
   href,
-  alt,
+  onDotClick,
   currentIndex,
 }: Props) => {
   return (
@@ -69,17 +69,23 @@ const PageBanner = ({
         {/* SLIDER DOTS */}
         {sliders && (
           <div className="flex items-center gap-2 mt-4">
-            {sliders.map((_, i) => (
-              <motion.div
-                key={i}
-                animate={{
-                  width: i === currentIndex ? 20 : 12,
-                  backgroundColor:
-                    i === currentIndex ? "#YOUR_PRIMARY" : "#FFFFFF",
-                }}
-                className="h-1.5 rounded-full border border-gray-300"
-              />
-            ))}
+            {sliders.map((_, i) => {
+              const isActive = i === currentIndex;
+
+              return (
+                <motion.button
+                  key={i}
+                  animate={{
+                    height: isActive ? 8 : 4,
+                    backgroundColor: isActive ? "#00A7E5" : "#FFFFFF",
+                  }}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  className={`${isActive ? "border border-none" : "border-gray-300"} w-5 rounded-xs `}
+                  onClick={() => onDotClick?.(i)}
+                />
+              );
+            })}
           </div>
         )}
       </section>

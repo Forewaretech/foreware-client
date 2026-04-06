@@ -62,7 +62,7 @@ const OurServices = () => {
         ))}
       </ul>
       <ContentSpacing />
-      <Services />
+      <Services currentIdex={0} />
     </section>
   );
 };
