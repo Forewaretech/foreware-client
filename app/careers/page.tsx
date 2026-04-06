@@ -76,7 +76,7 @@ const CareersPage = () => {
                   </p>
                   <p className="text-sm text-gray-400">
                     While we don't have active listings today, we are always
-                    looking for Application Consultantss and Full-stack
+                    looking for Application Consultants and Full-stack
                     Developers.
                   </p>
                 </div>
