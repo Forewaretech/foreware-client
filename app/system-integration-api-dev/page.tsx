@@ -14,7 +14,7 @@ const SystemIntegrationApiDevPage = () => {
       <PageBanner
         bannerImage={{
           image: system_int_soft_dev,
-          alt: "system integration and software development banner",
+          alt: "Foreware Technologies - API and system connectivity solutions Nigeria",
         }}
         heading={
           "Systems Integration & API Development that Supports Smarter Operations"
@@ -27,7 +27,10 @@ const SystemIntegrationApiDevPage = () => {
       <SectionSpacing />
       <section className="container">
         <TileContent
-          image={sys_int_api}
+          image={{
+            src: sys_int_api,
+            alt: "Foreware Technologies – systems integration solutions Nigeria",
+          }}
           heading={"Systems Integration & API Development"}
           highlightText={"Overview"}
           imageClassName="

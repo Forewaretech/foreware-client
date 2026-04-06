@@ -7,9 +7,8 @@ interface Props {
   heading?: string;
   highlightText?: string;
   content: ReactNode;
-  image: StaticImageData | string;
+  image: { src: StaticImageData | string; alt: string };
   imageClassName?: string;
-  alt?: string;
   direction?: "ltr" | "rtl";
 }
 const TileContent = ({
@@ -18,7 +17,6 @@ const TileContent = ({
   content,
   image,
   imageClassName,
-  alt = "default",
   direction = "rtl",
 }: Readonly<Props>) => {
   return (
@@ -44,8 +42,8 @@ const TileContent = ({
         )}
       >
         <Image
-          src={image}
-          alt={heading || alt}
+          src={image.src}
+          alt={image.alt}
           className=" h-full w-full object-cover"
         />
       </div>

@@ -54,7 +54,9 @@ const WebHRSuitedFor = () => {
       <div className="overflow-clip">
         <Image
           src={webhr_desktop}
-          alt={"odoo suited for"}
+          alt={
+            "Foreware Technologies - WebHR solutions for growing businesses Nigeria"
+          }
           className=" w-full h-full object-cover"
         />
       </div>

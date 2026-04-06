@@ -7,28 +7,40 @@ import third_party_soft_int from "@/public/images/syss_int_api_dev/third_party_s
 
 const sysIntAPIDevSols = [
   {
-    image: ent_syst_int,
+    image: {
+      src: ent_syst_int,
+      alt: "Foreware Technologies - enterprise system integration services",
+    },
     title: "Enterprise System Integration",
     content: [
       "We integrate core enterprise systems to ensure data flows smoothly across business functions. This improves visibility, reduces duplication, and supports coordinated operations.",
     ],
   },
   {
-    image: api_design_dev,
+    image: {
+      src: api_design_dev,
+      alt: "Foreware Technologies - API design and development Nigeria",
+    },
     title: "API Design & Development",
     content: [
       "We build APIs that allow systems to communicate securely and efficiently. Designed to support internal integrations, external partners, and future expansion.",
     ],
   },
   {
-    image: third_party_soft_int,
+    image: {
+      src: third_party_soft_int,
+      alt: "Foreware Technologies - third-party software integration solutions",
+    },
     title: "Third-Party Software Integration",
     content: [
       "We connect third-party applications with existing business systems. This enables smoother workflows and better use of data across platforms.",
     ],
   },
   {
-    image: middleware_int_pltfs,
+    image: {
+      src: middleware_int_pltfs,
+      alt: "Foreware Technologies - middleware and integration platforms",
+    },
     title: "Middleware & Integration Platforms",
     content: [
       "We implement middleware solutions that manage and orchestrate system integrations. This provides a stable layer for connecting applications, services, and data sources.",

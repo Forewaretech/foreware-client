@@ -8,33 +8,48 @@ import user_tr_chg_mgt from "@/public/images/it_support/user_tr_chg_mgt.jpg";
 
 const iTSupportSols = [
   {
-    image: it_strategy,
+    image: {
+      src: it_strategy,
+      alt: "Foreware Technologies - IT strategy and digital transformation consulting",
+    },
     title: "IT Strategy & Digital Transformation Consulting",
     content: [
       "We help organizations think clearly about their technology direction. This includes reviewing existing systems, identifying gaps, and planning practical improvements that align with business goals.",
     ],
   },
   {
-    image: app_sup_maint,
+    image: {
+      src: app_sup_maint,
+      alt: "Foreware Technologies - application support and maintenance services",
+    },
     title: "Application Support & Maintenance",
     content: [
       "We provide ongoing support to keep business applications stable and available. Our focus is on resolving issues quickly and ensuring systems continue to support daily operations.",
     ],
   },
   {
-    image: inft_cloud_sup,
+    image: {
+      src: inft_cloud_sup,
+      alt: "Foreware Technologies - infrastructure and cloud support Nigeria",
+    },
     title: "Infrastructure & Cloud Support",
     content: [""],
   },
   {
-    image: cyb_risk_adv,
+    image: {
+      src: cyb_risk_adv,
+      alt: "Foreware Technologies – cybersecurity and risk advisory solutions",
+    },
     title: "Cybersecurity & Risk Advisory",
     content: [
       "We help organizations understand their security risks and strengthen their defenses.Our advisory services focus on protecting systems, data, and business continuity.",
     ],
   },
   {
-    image: user_tr_chg_mgt,
+    image: {
+      src: user_tr_chg_mgt,
+      alt: "Foreware Technologies - user training and change management services",
+    },
     title: "User Training & Change Management",
     content: [
       "We support users through training and change programs that make technology easier to adopt.This helps teams feel confident using systems and reduces resistance to change.",

@@ -14,7 +14,7 @@ const EnterpriseBusinessSolutionPage = () => {
       <PageBanner
         bannerImage={{
           image: ent_business_sol,
-          alt: "Enterprise business solution banner",
+          alt: "Foreware Technologies - enterprise business solutions Nigeria",
         }}
         heading="Enterprise & Business Solutions that Power Your Business Growth"
         text="Reliable systems that bring clarity and control across your business."
@@ -41,7 +41,10 @@ const EnterpriseBusinessSolutionPage = () => {
               </p>
             </div>
           }
-          image={bizsol}
+          image={{
+            src: bizsol,
+            alt: "Foreware Technologies - enterprise business solutions Nigeria",
+          }}
         />
         <SectionSpacing />
         <EntBizSols />

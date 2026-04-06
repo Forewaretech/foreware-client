@@ -10,7 +10,11 @@ import retail_pos_solutions from "@/public/images/enterprise_biz_sols/retail_pos
 const bizSols = [
   {
     title: "ERP Solutions",
-    image: erp_solutions,
+    image: {
+      src: erp_solutions,
+      alt: "Foreware Technologies - ERP systems implementation Nigeria",
+    },
+
     content: [
       "Our ERP solutions help businesses manage finance, operations, inventory, and reporting through a single, connected system. We design and implement ERP platforms that improve visibility across teams and support better decision-making.",
       "We implement ERP solutions, including SAP systems, Microsoft Dynamics 365, Odoo, Zoho, and Sage, selecting the right platform based on your business size, complexity, and growth plans.",
@@ -18,7 +22,10 @@ const bizSols = [
   },
   {
     title: "CRM Solutions",
-    image: crm_solutions,
+    image: {
+      src: crm_solutions,
+      alt: "Foreware Technologies -  CRM systems implementation Nigeria",
+    },
     content: [
       "Our CRM solutions help organizations manage customer relationships, sales pipelines, and engagement across teams. We implement systems that improve customer visibility, streamline sales processes, and support more consistent follow-up.",
       "We work with leading CRM platforms, including Zoho CRM, Sage CRM, and Odoo CRM, and recommend the right solution based on your business needs and sales structure.",
@@ -26,7 +33,10 @@ const bizSols = [
   },
   {
     title: "HR Solutions",
-    image: hr_solutions,
+    image: {
+      src: hr_solutions,
+      alt: "Foreware Technologies - HR solutions Nigeria",
+    },
     content: [
       "Our HR solutions support workforce management across recruitment, payroll, performance, and compliance. We help organizations implement systems that improve visibility into employee data and streamline day-to-day HR operations.",
       "We recommend and implement HR platforms based on your workforce size, regulatory needs, and internal processes.",
@@ -34,7 +44,10 @@ const bizSols = [
   },
   {
     title: "GRC Solutions",
-    image: grc_solutions,
+    image: {
+      src: grc_solutions,
+      alt: "Foreware Technologies - GRC solutions Nigeria",
+    },
     content: [
       "Our Governance, Risk, and Compliance (GRC) solutions help organizations manage risk, maintain compliance, and strengthen internal controls. We support the implementation of systems that improve oversight, audit readiness, and regulatory alignment.",
       "Our approach ensures governance and compliance processes are structured, traceable, and integrated into daily operations.",
@@ -42,7 +55,10 @@ const bizSols = [
   },
   {
     title: "E-commerce Solutions",
-    image: e_commer_solutions,
+    image: {
+      src: e_commer_solutions,
+      alt: "Foreware Technologies - E-commerce solutions Nigeria",
+    },
     content: [
       "Our e-commerce solutions help businesses sell online while staying connected to core business systems. We design and implement platforms that support product management, orders, payments, and integrations with ERP and CRM systems.",
       "Our focus is on scalable e-commerce solutions that fit your business model and operational workflows.",
@@ -50,7 +66,10 @@ const bizSols = [
   },
   {
     title: "Retail & POS Solutions",
-    image: retail_pos_solutions,
+    image: {
+      src: retail_pos_solutions,
+      alt: "Foreware Technologies - Retail and POS Solutions solutions Nigeria",
+    },
     content: [
       "Our retail and POS solutions support end-to-end store operations, including billing, inventory management, reporting, and multi-location control. We help retailers run their operations with better accuracy, visibility, and consistency across stores.",
       "Our retail solutions include platforms such as Wondersoft Retail & POS, supporting structured retail operations and scalable store management.",

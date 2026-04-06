@@ -8,7 +8,7 @@ const OurPeople = () => {
       <TileContent
         heading="Leading from the Front"
         highlightText="Our Story"
-        image={about_2}
+        image={{ src: about_2, alt: "Foreware Technologies - Our Story" }}
         imageClassName="n"
         content={
           <div>

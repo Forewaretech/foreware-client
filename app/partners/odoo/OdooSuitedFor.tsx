@@ -48,7 +48,9 @@ const OdooSuitedFor = () => {
       <div className="overflow-clip">
         <Image
           src={odoo_suited_for_rrotate}
-          alt={"odoo suited for"}
+          alt={
+            "Foreware Technologies - scalable Odoo solutions for growing businesses Nigeria"
+          }
           className=" w-full h-full object-cover"
         />
       </div>

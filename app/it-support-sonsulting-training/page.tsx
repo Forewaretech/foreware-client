@@ -14,7 +14,7 @@ const ITSupportConsultingTrainingPage = () => {
       <PageBanner
         bannerImage={{
           image: it_support,
-          alt: "IT support and consulting banner",
+          alt: "Foreware Technologies - reliable IT support and technology consulting Nigeria",
         }}
         heading={"Reliable IT Support, Consulting & Training Services"}
         text={
@@ -32,7 +32,10 @@ const ITSupportConsultingTrainingPage = () => {
           content={[
             "Foreware delivers structured IT support and advisory services focused on system reliability, security, and operational continuity.",
           ]}
-          image={overview}
+          image={{
+            src: overview,
+            alt: "Foreware Technologies - IT support and consulting services Nigeria",
+          }}
         />
         <SectionSpacing />
         <ITSupportSols />

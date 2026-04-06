@@ -18,7 +18,7 @@ const PartnersPage = () => {
       <PageBanner
         bannerImage={{
           image: odoo_banner,
-          alt: "odoo banner",
+          alt: "Foreware Technologies - Odoo ERP and CRM partner Nigeria",
         }}
         heading={"Foreware - Odoo Partner in Nigeria"}
         text={
@@ -37,7 +37,10 @@ const PartnersPage = () => {
         <TileContent
           direction="ltr"
           imageClassName="lg:max-h-[300px] xl:max-w-[500px]"
-          image={odoo_overivew}
+          image={{
+            src: odoo_overivew,
+            alt: "Foreware Technologies - Odoo implementation and support services",
+          }}
           content={
             <div>
               <p>

@@ -16,7 +16,7 @@ const WebHRPage = () => {
       <PageBanner
         bannerImage={{
           image: webhr_banner,
-          alt: "webhr banner",
+          alt: "Foreware Technologies - WebHR partner Nigeria",
         }}
         heading={"Foreware - WebHR Partner in Nigeria"}
         text={
@@ -35,7 +35,10 @@ const WebHRPage = () => {
         <TileContent
           direction="ltr"
           imageClassName="lg:max-h-[300px] xl:max-w-[500px]"
-          image={webhr_overview}
+          image={{
+            src: webhr_overview,
+            alt: "Foreware Technologies - WebHR implementation and HR management services",
+          }}
           content={
             <div>
               <p>
@@ -74,7 +77,7 @@ const WebHRPage = () => {
           center
         >
           If you're considering WebHR or looking to improve how you manage HR
-          operations, we’re ready to discuss how WebHR can support your
+          operations, we're ready to discuss how WebHR can support your
           workforce.
         </HeaderContent>
         <SectionSpacing />

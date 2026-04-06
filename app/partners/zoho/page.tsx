@@ -36,7 +36,10 @@ const ZohoPage = () => {
         <TileContent
           direction="ltr"
           imageClassName="lg:max-h-[300px] xl:max-w-[500px]"
-          image={zoho_overview}
+          image={{
+            src: zoho_overview,
+            alt: "Foreware Technologies - Zoho CRM partner Nigeria",
+          }}
           content={
             <div>
               <p>
@@ -81,7 +84,10 @@ const ZohoPage = () => {
                 />
               </div>
             }
-            image={zoho_suited_for}
+            image={{
+              src: zoho_suited_for,
+              alt: "Foreware Technologies – Zoho solutions for growing businesses Nigeria",
+            }}
           />
         </section>
       </section>

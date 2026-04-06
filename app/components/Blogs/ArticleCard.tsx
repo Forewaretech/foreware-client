@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import Heading from "../Headers/Headings";
 
 interface Props {
-  image: StaticImageData | string;
+  image: { src: StaticImageData | string; alt: string };
   content: ReactNode;
   title: string;
 }
@@ -16,8 +16,8 @@ const ArticleCard = ({ image, title, content }: Readonly<Props>) => {
     >
       <div className="h-44">
         <Image
-          src={image}
-          alt={title}
+          src={image.src}
+          alt={image.alt}
           className=" h-full w-full object-cover"
         />
       </div>

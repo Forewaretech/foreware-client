@@ -14,7 +14,7 @@ const DataAnalyticsAISolutionPage = () => {
       <PageBanner
         bannerImage={{
           image: data_analytics_ai,
-          alt: "data analytics and ai",
+          alt: "Foreware Technologies - data-driven business insights Nigeria",
         }}
         heading={"Data Analytics & AI for Business Insight"}
         text={"We help businesses turn data into actionable insights."}
@@ -23,7 +23,10 @@ const DataAnalyticsAISolutionPage = () => {
       <SectionSpacing />
       <section className="container">
         <TileContent
-          image={overview}
+          image={{
+            src: overview,
+            alt: "Foreware Technologies – data analytics and AI solutions Nigeria",
+          }}
           heading={"Data Analytics & AI"}
           highlightText={"Overview"}
           imageClassName="-"

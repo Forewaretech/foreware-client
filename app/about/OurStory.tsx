@@ -9,7 +9,7 @@ const OurStory = () => {
       <TileContent
         heading="Leading from the Front"
         highlightText="Our Story"
-        image={about_1}
+        image={{ src: about_1, alt: "Foreware Technologies - Our Story" }}
         content={
           <div>
             <p>

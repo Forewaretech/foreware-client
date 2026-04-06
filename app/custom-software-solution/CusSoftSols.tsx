@@ -8,35 +8,50 @@ import legacy_sys_modernization from "@/public/images/custom_software_dev/legacy
 
 const cusSols = [
   {
-    image: ind_spec_soft_sol,
+    image: {
+      src: ind_spec_soft_sol,
+      alt: "Foreware Technologies - industry-specific software solutions Africa",
+    },
     title: "Industry-Specific Software Solutions",
     content: [
       "Software solutions tailored to industry-specific workflows and operational requirements. Built to support real-world processes and regulatory needs.",
     ],
   },
   {
-    image: web_app_dev,
+    image: {
+      src: web_app_dev,
+      alt: "Foreware Technologies - web application development Nigeria",
+    },
     title: "Web Application Development",
     content: [
       "Secure and scalable web applications designed to support business operations. Built for performance, usability, and long-term maintainability.",
     ],
   },
   {
-    image: mobile_app_dev,
+    image: {
+      src: mobile_app_dev,
+      alt: "Foreware Technologies – mobile app development solutions Nigeria",
+    },
     title: "Mobile Application Development",
     content: [
       "Mobile applications that support business processes and user engagement. Built for reliability, performance, and cross-platform usability.",
     ],
   },
   {
-    image: ent_app_devi,
+    image: {
+      src: ent_app_devi,
+      alt: "Foreware Technologies – enterprise application development Africa",
+    },
     title: "Enterprise Application Development",
     content: [
       "Enterprise-grade applications built to support complex business processes. Designed for scalability, security, and long-term operational use.",
     ],
   },
   {
-    image: legacy_sys_modernization,
+    image: {
+      src: legacy_sys_modernization,
+      alt: "Foreware Technologies – legacy system modernization services",
+    },
     title: "Legacy System Modernization",
     content: [
       "Modernizing outdated systems to improve performance, security, and usability. Focused on extending system value while reducing operational risk.",

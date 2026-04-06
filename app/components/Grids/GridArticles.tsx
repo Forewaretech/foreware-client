@@ -4,7 +4,7 @@ import ArticleCard from "../Blogs/ArticleCard";
 interface Props {
   articles: {
     title: string;
-    image: StaticImageData | string;
+    image: { src: StaticImageData | string; alt: string };
     content: string[];
   }[];
 }
@@ -19,7 +19,7 @@ const GridArticles = ({ articles }: Readonly<Props>) => {
         return (
           <ArticleCard
             key={title}
-            image={image}
+            image={{ src: image.src, alt: image.alt }}
             content={
               <div>
                 {content.map((text, i) => (

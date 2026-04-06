@@ -16,7 +16,7 @@ const WondersoftPage = () => {
       <PageBanner
         bannerImage={{
           image: wondersoft_banner,
-          alt: "wondersoft banner",
+          alt: "Foreware Technologies - Wondersoft retail and POS partner Nigeria",
         }}
         heading={"Foreware - Wondersoft Partner in Nigeria"}
         text={
@@ -36,7 +36,10 @@ const WondersoftPage = () => {
         <TileContent
           direction="ltr"
           imageClassName="h-[300px]  lg:max-h-[300px] xl:max-w-[500px]"
-          image={wondersoft_overview}
+          image={{
+            src: wondersoft_overview,
+            alt: "Foreware Technologies - Wondersoft implementation and inventory management services",
+          }}
           content={
             <div>
               <p>
@@ -86,7 +89,10 @@ const WondersoftPage = () => {
                 />
               </div>
             }
-            image={wondersoft_suited_for}
+            image={{
+              src: wondersoft_suited_for,
+              alt: "Foreware Technologies - Wondersoft solutions for multi-store retail Nigeria",
+            }}
           />
         </section>
       </section>

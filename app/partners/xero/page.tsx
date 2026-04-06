@@ -16,7 +16,7 @@ const XeroPage = () => {
       <PageBanner
         bannerImage={{
           image: xero_banner,
-          alt: "xero banner",
+          alt: "Foreware Technologies - Xero accounting partner Nigeria",
         }}
         heading={"Foreware - Xero Partner in Nigeria"}
         text={
@@ -35,7 +35,10 @@ const XeroPage = () => {
         <SectionSpacing />
         <TileContent
           imageClassName=" lg:max-h-[300px] xl:max-w-[500px]"
-          image={xero_overview}
+          image={{
+            src: xero_overview,
+            alt: "Foreware Technologies - Xero implementation and bookkeeping services",
+          }}
           content={
             <div>
               <p>
@@ -80,7 +83,10 @@ const XeroPage = () => {
                 />
               </div>
             }
-            image={xero_suited_for}
+            image={{
+              src: xero_suited_for,
+              alt: "Foreware Technologies - Xero cloud accounting solutions for businesses Nigeria",
+            }}
           />
         </section>
       </section>

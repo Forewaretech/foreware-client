@@ -16,7 +16,7 @@ const RiskCognizancePage = () => {
       <PageBanner
         bannerImage={{
           image: risk_cognizance_banner,
-          alt: "risk cognozance banner",
+          alt: "Foreware Technologies - Vanta partner Nigeria",
         }}
         heading={"Foreware - Vanta GRC Partner in Nigeria"}
         text={
@@ -36,7 +36,10 @@ const RiskCognizancePage = () => {
         <TileContent
           direction="ltr"
           imageClassName="lg:max-h-[300px] xl:max-w-[500px]"
-          image={risk_cognizance_overview}
+          image={{
+            src: risk_cognizance_overview,
+            alt: "Foreware Technologies - Vanta implementation and compliance services",
+          }}
           content={
             <div>
               <p>
@@ -87,7 +90,10 @@ const RiskCognizancePage = () => {
                 />
               </div>
             }
-            image={risk_cognizance_suited_for}
+            image={{
+              src: risk_cognizance_suited_for,
+              alt: "Foreware Technologies - governance, risk, and compliance solutions Nigeria",
+            }}
           />
         </section>
       </section>

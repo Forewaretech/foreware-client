@@ -13,6 +13,7 @@ interface Props {
   sliders?: string[];
   currentIndex?: number;
   href?: string;
+  alt?: string;
 }
 
 const PageBanner = ({
@@ -22,6 +23,7 @@ const PageBanner = ({
   buttonText,
   sliders,
   href,
+  alt,
   currentIndex,
 }: Props) => {
   return (

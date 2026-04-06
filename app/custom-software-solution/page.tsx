@@ -14,7 +14,7 @@ const CustomSoftwareSolutiolnPage = () => {
       <PageBanner
         bannerImage={{
           image: custom_soft_dev,
-          alt: "custom software development banner",
+          alt: "Foreware Technologies - tailored software solutions for businesses",
         }}
         heading={"Tailored Software Solutions That Match Your Exact Needs"}
         text={
@@ -23,9 +23,13 @@ const CustomSoftwareSolutiolnPage = () => {
         buttonText="Request a Consultation"
       />
       <SectionSpacing />
+
       <section className="container">
         <TileContent
-          image={overview_img}
+          image={{
+            src: overview_img,
+            alt: "Foreware Technologies - custom software development Nigeria",
+          }}
           heading={"Custom Software Development"}
           highlightText={"Overview"}
           imageClassName="-"
