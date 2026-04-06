@@ -3,7 +3,8 @@ import PageBanner from "../components/Banners/PageBanner";
 import Socials from "../components/Footer/Socials";
 import SectionSpacing from "../components/Spacing/SectionSpacing";
 
-import contact_us_banner from "@/public/images/banners/contact_us_banner.jpg";
+import contact_us_banner from "@/public/images/banners/contact_us_banner.webp";
+
 import { ADDRESS, EMAIL, PHONE } from "../lib/constants";
 import ContactForm from "./ContactForm";
 
