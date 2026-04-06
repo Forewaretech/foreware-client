@@ -25,27 +25,27 @@ const bannerData = [
     image: homeBanner2,
   },
   {
-    buttonText: "Find out more",
     heading: "Integration built for scale.",
     text: "Enterprise-grade integrations and APIs that keep systems aligned as your business grows.",
+    buttonText: "Find out more",
     image: homeBanner3,
   },
   {
-    buttonText: "Get Reliable Support",
     heading: "Reliable IT Support",
     text: "Our IT support and consulting solutions ensure your operations remain uninterrupted, your team stays productive, and your business keeps moving.",
+    buttonText: "Get Reliable Support",
     image: homeBanner4,
   },
   {
-    buttonText: "Let's talk strategy",
     heading: "Partnership That Drives Results.",
     text: "Your growth demands more than a vendor; it requires a strategic partner.",
+    buttonText: "Let's talk strategy",
     image: homeBanner5,
   },
   {
-    buttonText: "Explore our solutions",
     heading: "We Build System That Scale.",
     text: "We partner with businesses of all sizes to create custome software, data solutions, and AI systems that grow with your business.",
+    buttonText: "Explore our solutions",
     image: homeBanner6,
   },
 ];

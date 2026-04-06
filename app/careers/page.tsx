@@ -15,12 +15,12 @@ const values = [
   {
     icon: <Zap className="text-primary" />,
     title: "Innovation",
-    desc: "We push the boundaries of PETs and AI to solve real-world privacy challenges.",
+    desc: "We push the boundaries of PETs, Enterprise Technolgies and AI to solve real-world business challenges.",
   },
   {
     icon: <Users className="text-primary" />,
     title: "Collaboration",
-    desc: "A flat hierarchy where every engineer and analyst has a voice in the final product.",
+    desc: "A flat hierarchy where every engineer, consutlant and analyst has a voice in the final solution.",
   },
 ];
 
@@ -29,7 +29,7 @@ const CareersPage = () => {
     <main className="min-h-screen pb-20">
       <PageBanner
         bannerImage={{ image: career_banner, alt: "Join the Foreware team" }}
-        heading="Shape the Future of Security"
+        heading="Shape the Future of Innovation"
         text="Join a team of visionaries dedicated to building privacy-preserving technologies and secure digital infrastructure."
       />
 
@@ -72,11 +72,11 @@ const CareersPage = () => {
                 {/* Placeholder for no roles */}
                 <div className="p-6 border border-white/10 rounded-xl bg-white/5 backdrop-blur-sm">
                   <p className="text-lg font-medium text-primary mb-1">
-                    We're currently scaling our teams.
+                    We are currently scaling our teams.
                   </p>
                   <p className="text-sm text-gray-400">
                     While we don't have active listings today, we are always
-                    looking for Application Security Analysts and Full-stack
+                    looking for Application Consultantss and Full-stack
                     Developers.
                   </p>
                 </div>
