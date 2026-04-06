@@ -48,8 +48,8 @@ const PageBanner = ({
         />
       </motion.div>
 
-      <section className="container absolute inset-0 z-10 pt-10">
-        <BannerNav />
+      <section className="container absolute inset-0 z-10 pt-24">
+        {/* <BannerNav /> */}
 
         {/* CONTENT ANIMATION: Layout prop handles height/width shifts */}
         <motion.div

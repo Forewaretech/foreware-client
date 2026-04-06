@@ -10,6 +10,7 @@ import homeBanner6 from "@/public/images/banners/home_banner_6.webp";
 import PageBanner from "./PageBanner";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import BannerNav from "./BannerNav";
 
 const bannerData = [
   {

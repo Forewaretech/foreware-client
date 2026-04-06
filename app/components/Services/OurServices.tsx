@@ -9,9 +9,9 @@ import data_analytics_ai from "@/public/icons/data_analytics_ai.svg";
 import enterprise_and_business from "@/public/icons/enterprise_and_business.svg";
 import it_sup_consulting_training from "@/public/icons/it_sup_consulting_training.svg";
 import sys_int_api from "@/public/icons/sys_int_api.svg";
-import enterprise_scale from "@/public/images/enterprise_scale.svg";
 import Image from "next/image";
 import Link from "next/link";
+import Services from "./Services";
 
 const services = [
   {
@@ -62,29 +62,7 @@ const OurServices = () => {
         ))}
       </ul>
       <ContentSpacing />
-      <section
-        className="flex flex-col justify-between gap-4
-      lg:flex-row"
-      >
-        <div className="min-w-1/2">
-          <HeaderContent heading="Enterprise Software Solutions for Businesses of All Sizes.">
-            Modern enterprise solutions that unify operations, increase
-            visibility, and drive efficiency across every function.
-          </HeaderContent>
-          <BaseSpacing />
-          <Link href="/contact">
-            <Button>Talk to an Expert</Button>
-          </Link>
-        </div>
-
-        <div className="min-w-1/2">
-          <Image
-            src={enterprise_scale}
-            alt="Enterprise Systems That Scale"
-            className=" w-full "
-          />
-        </div>
-      </section>
+      <Services />
     </section>
   );
 };

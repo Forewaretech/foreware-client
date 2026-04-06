@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import TopHeader from "./components/Headers/TopHeader";
+import BannerNav from "./components/Banners/BannerNav";
 import Footer from "./components/Footer/Footer";
+import PopUpFormClient from "./components/Form/PopUpFormClient";
 import "./globals.css";
 import QueryProvider from "./providers/QueryProvider";
-import PopUpFormClient from "./components/Form/PopUpFormClient";
 
 // Define the Schema object outside the component
 const schemaData = {
@@ -125,6 +125,10 @@ export default async function RootLayout({
       </head>
       <body suppressHydrationWarning>
         {/* <TopHeader /> */}
+
+        <div className="container absolute top-10 left-0 right-0 z-50">
+          <BannerNav />
+        </div>
 
         <QueryProvider>
           <>{children}</>
