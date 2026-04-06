@@ -61,7 +61,7 @@ const CareersPage = () => {
 
       {/* Open Roles Section */}
       <section className="container mt-28">
-        <div className="bg-dark-1 text-white rounded-[2rem] p-8 md:p-16 overflow-hidden relative">
+        <div className="bg-dark-1 text-white rounded-4xl p-8 md:p-16 overflow-hidden relative">
           {/* Subtle background glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary opacity-10 blur-[100px] -mr-32 -mt-32"></div>
 

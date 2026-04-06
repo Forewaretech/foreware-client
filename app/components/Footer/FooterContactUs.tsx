@@ -47,8 +47,8 @@ const FooterContactUs = () => {
           <div className="flex gap-4">
             <MapPin size={20} className=" text-white min-w-5" />
             <div>
-              <p className=" font-bold clear-both text-white">Office Address</p>
-              <p className=" text-white/90">{ADDRESS}</p>
+              <p className="font-bold clear-both text-white">Office Address</p>
+              <p className="text-white/90">{ADDRESS}</p>
             </div>
           </div>
           <Socials />
