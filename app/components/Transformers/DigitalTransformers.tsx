@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import digital_transform_bg from "@/public/images/digital_transform_bg.jpg";
-import digital_transformers from "@/public/images/digital_transformers.png";
+import digital_transformers from "@/public/images/digital_transformers.webp";
 import Heading from "../Headers/Headings";
 import BaseSpacing from "../Spacing/BaseSpacing";
 import Button from "../Buttons/Button";
