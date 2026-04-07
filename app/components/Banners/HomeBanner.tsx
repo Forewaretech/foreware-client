@@ -58,7 +58,7 @@ const bannerData = [
     },
   },
   {
-    heading: "We Build System That Scale.",
+    heading: "We Build Systems That Scale.",
     text: "We partner with businesses of all sizes to create custome software, data solutions, and AI systems that grow with your business.",
     buttonText: "Explore our solutions",
     image: {
