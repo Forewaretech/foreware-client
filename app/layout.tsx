@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import PopUpFormClient from "./components/Form/PopUpFormClient";
 import "./globals.css";
 import QueryProvider from "./providers/QueryProvider";
+import { Toaster } from "sonner";
 
 // Define the Schema object outside the component
 const schemaData = {
@@ -131,6 +132,7 @@ export default async function RootLayout({
         </div>
 
         <QueryProvider>
+          <Toaster />
           <>{children}</>
           <PopUpFormClient />
         </QueryProvider>

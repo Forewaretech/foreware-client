@@ -53,7 +53,7 @@ const HeaderContent = ({
       </div>
       {buttonText && (
         <Link
-          href={`${href ? href : ""}`}
+          href={`${href ? href : "/contact"}`}
           className={`${center && "flex justify-center items-center"} my-4`}
         >
           <Button>{buttonText}</Button>
