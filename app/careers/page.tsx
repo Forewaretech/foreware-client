@@ -20,7 +20,7 @@ const values = [
   {
     icon: <Users className="text-primary" />,
     title: "Collaboration",
-    desc: "A flat hierarchy where every engineer, consutlant and analyst has a voice in the final solution.",
+    desc: "A flat hierarchy where every engineer, consultant and analyst has a voice in the final solution.",
   },
 ];
 
