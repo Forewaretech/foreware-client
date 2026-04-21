@@ -8,7 +8,7 @@ import TileContent from "../components/Headers/TileContent";
 import HeaderContent from "../components/Headers/HeaderContent";
 import CusSoftSols from "./CusSoftSols";
 
-const CustomSoftwareSolutiolnPage = () => {
+const CustomSoftwareSolutionPage = () => {
   return (
     <main>
       <PageBanner
@@ -61,4 +61,4 @@ const CustomSoftwareSolutiolnPage = () => {
   );
 };
 
-export default CustomSoftwareSolutiolnPage;
+export default CustomSoftwareSolutionPage;

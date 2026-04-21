@@ -58,9 +58,9 @@ const interSans = Roboto({
 
 export const metadata: Metadata = {
   title:
-    "Foreware Technologies: Leading Technology Solutions Provider in Nigeria",
+    "Foreware Technologies | Leading Technology Solutions Provider in Nigeria",
   description:
-    "Foreware Technologies is a leading technology solutions provider in Nigeria delivering custom software, AI, and IT support.",
+    "Foreware Technologies is a leading technology solutions provider in Nigeria delivering enterprise business solutions, custom software, Data & AI and IT support services to businesses across Nigeria and Africa.	technology solutions provider in Nigeria",
 };
 
 export default async function RootLayout({

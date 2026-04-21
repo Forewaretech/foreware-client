@@ -12,7 +12,7 @@ import odoo_overivew from "@/public/images/partners/odoo_overivew.png";
 import SuitedFor from "./OdooSuitedFor";
 import ListDisc from "@/app/components/List/ListDisc";
 
-const PartnersPage = () => {
+const OdooPage = () => {
   return (
     <main>
       <PageBanner
@@ -89,4 +89,4 @@ const PartnersPage = () => {
   );
 };
 
-export default PartnersPage;
+export default OdooPage;
