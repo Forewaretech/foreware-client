@@ -151,6 +151,18 @@ border-radius: 20px;
 /* Editor Wrapper */
 .editor-content {
   @apply text-justify leading-relaxed text-gray-800;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.editor-content img,
+.editor-content video,
+.editor-content iframe {
+  @apply max-w-full h-auto rounded-lg my-4;
+}
+
+.editor-content table {
+  @apply block w-full overflow-x-auto;
 }
 
 /* Paragraphs */

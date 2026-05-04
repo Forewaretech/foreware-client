@@ -31,19 +31,21 @@ const BlogPostDetailClient = ({ postId, initialData }: Readonly<Props>) => {
           heading={postDetail?.title}
           text={postDetail?.summary}
         />
-        <div className="h-11 bg-gray-200 container flex items-center gap-12">
-          <p className="flex items-center gap-2">
-            <Timer size={18} />
-            <span>
-              {formatDistanceToNow(new Date(postDetail.createdAt!), {
-                addSuffix: true,
-              })}
-            </span>
-          </p>
-          <p className="flex items-center gap-2">
-            <User2 size={18} />
-            <span>{postDetail?.author ?? "Foreware Team"}</span>
-          </p>
+        <div className="bg-gray-200">
+          <div className="container py-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm sm:text-base">
+            <p className="flex items-center gap-2">
+              <Timer size={18} />
+              <span>
+                {formatDistanceToNow(new Date(postDetail.createdAt!), {
+                  addSuffix: true,
+                })}
+              </span>
+            </p>
+            <p className="flex items-center gap-2">
+              <User2 size={18} />
+              <span>{postDetail?.author ?? "Foreware Team"}</span>
+            </p>
+          </div>
         </div>
         <SectionSpacing />
         <section className="container">
