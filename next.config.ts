@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         hostname: "foreware-bucket.s3.us-east-1.amazonaws.com",
         pathname: "/**", // Allows all folders in the bucket
       },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/dibzlkzlz/image/upload/**",
+      },
     ],
   },
 };
