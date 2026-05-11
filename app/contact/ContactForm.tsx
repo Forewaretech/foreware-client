@@ -29,10 +29,8 @@ const ContactForm = () => {
     try {
       // Replace with your actual API URL
       const response = await apiClient.post("/contact", data);
-      console.log("RESULT: ", response);
 
-      if (response.status === 201) {
-        console.log("SUCCESS: ");
+      if (response.status >= 200 && response.status < 300) {
         toast.success("Message Received!", {
           description:
             "Thanks for reaching out. Our team will review your inquiry and get back to you within 24 hours.",

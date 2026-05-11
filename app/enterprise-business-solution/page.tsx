@@ -5,7 +5,7 @@ import SectionSpacing from "../components/Spacing/SectionSpacing";
 import TileContent from "../components/Headers/TileContent";
 import EntBizSols from "./EntBizSols";
 
-import bizsol from "@/public/images/enterprise_biz_sols/bizsols.png";
+import bizsol from "@/public/images/enterprise_biz_sols/e-commer-solutions.png";
 import HeaderContent from "../components/Headers/HeaderContent";
 
 const EnterpriseBusinessSolutionPage = () => {
