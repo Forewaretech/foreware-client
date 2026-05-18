@@ -20,6 +20,8 @@ export type PostType = {
   seoDescription?: string;
   user?: { name: string };
   createdAt?: string;
+  updatedAt?: string;
+  publishedAt?: string | null;
   author?: string;
 };
 

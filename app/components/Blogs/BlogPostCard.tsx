@@ -1,4 +1,5 @@
 import { PostType } from "@/app/hooks/posts/postService";
+import { formatLongDate } from "@/app/lib/formatLongDate";
 import Image from "next/image";
 import Link from "next/link";
 import BaseSpacing from "../Spacing/BaseSpacing";
@@ -7,21 +8,8 @@ interface Props {
   post: PostType;
 }
 
-const formatDate = (value?: string) => {
-  if (!value) return "";
-  try {
-    return new Date(value).toLocaleDateString(undefined, {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-  } catch {
-    return "";
-  }
-};
-
 const BlogPostCard = ({ post }: Readonly<Props>) => {
-  const dateLabel = formatDate(post.createdAt);
+  const dateLabel = formatLongDate(post.publishedAt ?? post.createdAt);
 
   return (
     <Link

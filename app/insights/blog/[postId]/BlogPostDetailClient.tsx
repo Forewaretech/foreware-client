@@ -6,9 +6,9 @@ import SectionSpacing from "@/app/components/Spacing/SectionSpacing";
 import Support from "@/app/components/Transformers/Support";
 import { PostType } from "@/app/hooks/posts/postService";
 import usePost from "@/app/hooks/posts/usePost";
+import { formatLongDate, wasMeaningfullyUpdated } from "@/app/lib/formatLongDate";
 import fallback_banner from "@/public/images/banners/fallback_banner.png";
-import { formatDistanceToNow } from "date-fns";
-import { Timer, User2 } from "lucide-react";
+import { CalendarDays, RefreshCw, User2 } from "lucide-react";
 
 interface Props {
   postId: string;
@@ -19,6 +19,13 @@ const BlogPostDetailClient = ({ postId, initialData }: Readonly<Props>) => {
   const { data: postDetail, isLoading } = usePost({ id: postId, initialData });
 
   if (!postDetail) return <p>Not Found</p>;
+
+  const publishedSource = postDetail.publishedAt ?? postDetail.createdAt;
+  const publishedLabel = formatLongDate(publishedSource);
+  const showUpdated = wasMeaningfullyUpdated(
+    publishedSource,
+    postDetail.updatedAt,
+  );
 
   if (postDetail)
     return (
@@ -33,14 +40,20 @@ const BlogPostDetailClient = ({ postId, initialData }: Readonly<Props>) => {
         />
         <div className="bg-gray-200">
           <div className="container py-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm sm:text-base">
-            <p className="flex items-center gap-2">
-              <Timer size={18} />
-              <span>
-                {formatDistanceToNow(new Date(postDetail.createdAt!), {
-                  addSuffix: true,
-                })}
-              </span>
-            </p>
+            {publishedLabel && (
+              <p className="flex items-center gap-2">
+                <CalendarDays size={18} />
+                <span>Published {publishedLabel}</span>
+              </p>
+            )}
+            {showUpdated && (
+              <p className="flex items-center gap-2 text-gray-600">
+                <RefreshCw size={16} />
+                <span className="text-sm">
+                  Updated {formatLongDate(postDetail.updatedAt)}
+                </span>
+              </p>
+            )}
             <p className="flex items-center gap-2">
               <User2 size={18} />
               <span>{postDetail?.author ?? "Foreware Team"}</span>
